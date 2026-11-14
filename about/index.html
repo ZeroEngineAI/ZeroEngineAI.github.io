@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>关于零擎智能 · 零擎智能 ZeroEngineAI</title>
+<title>关于 · 零擎智能 ZeroEngineAI</title>
 <meta name="description" content="零擎智能 ZeroEngineAI：AI 产品与财经内容">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='36' font-weight='700' fill='%23fff' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E">
 <style>
@@ -14,10 +14,18 @@ a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 .wrap{max-width:720px;margin:0 auto;padding:0 20px}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0;flex-wrap:wrap}
-.brand{font-size:17px;font-weight:600;color:var(--ink);letter-spacing:.2px}
+.brand{display:inline-flex;align-items:center;font-size:17px;font-weight:600;color:var(--ink);letter-spacing:.2px}
 .brand:hover{text-decoration:none}
 .brand small{font-size:12px;font-weight:400;color:var(--muted);margin-left:8px}
-.lg-b{color:#4285F4}.lg-r{color:#EA4335}.lg-y{color:#F9AB00}.lg-g{color:#34A853}
+.logo-svg{display:block}
+.brand .logo-svg{height:22px;width:auto}
+.hero-logo{margin:0}
+.hero-logo .logo-svg{width:320px;height:auto;margin:0 auto}
+.about-logo{margin:4px 0 2px}
+.about-logo .logo-svg{width:200px;height:auto}
+.notfound{text-align:center;padding:48px 0}
+.notfound-logo .logo-svg{width:180px;height:auto;margin:0 auto 20px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 nav{display:flex;gap:4px;flex-wrap:wrap}
 nav a{color:var(--ink);padding:6px 10px;font-size:14px}
 nav a:hover{color:var(--ink);text-decoration:underline}
@@ -36,11 +44,16 @@ blockquote{margin:14px 0;padding:10px 16px;background:var(--soft);border-left:3p
 hr{border:none;border-top:1px solid var(--line);margin:28px 0}
 .meta{color:var(--muted);font-size:14px;margin:0 0 18px}
 .hero{text-align:center;padding:72px 0 8px}
-.wordmark{font-size:52px;line-height:1.2;letter-spacing:-1px;margin:0;font-weight:700}
 .tagline{color:var(--muted);font-size:16px;margin:10px 0 0}
 .searchbox{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:584px;height:50px;margin:30px auto 0;padding:0 22px;border:1px solid #dfe1e5;border-radius:999px;color:#9aa0a6;font-size:16px;box-shadow:0 1px 6px rgba(32,33,36,.12)}
-.searchbox:hover{text-decoration:none;color:#5f6368;box-shadow:0 1px 8px rgba(32,33,36,.2)}
-.searchbox .go{color:var(--accent);font-size:18px}
+.searchbox:hover{box-shadow:0 1px 8px rgba(32,33,36,.2)}
+.searchbox input{flex:1;min-width:0;border:0;outline:0;background:transparent;font:inherit;color:var(--ink)}
+.searchbox input::placeholder{color:#9aa0a6}
+.searchbox button{border:0;background:none;color:var(--accent);font-size:18px;cursor:pointer;padding:0 2px;line-height:1}
+.product{max-width:640px;margin:48px auto 0;text-align:left;border:1px solid var(--line);border-radius:12px;padding:16px 20px;background:var(--soft)}
+.product p{margin:0;font-size:15px;line-height:1.8}
+.product .pname{font-weight:700}
+.product .price{font-weight:700}
 .quicklinks{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-top:28px}
 .quicklinks a{color:var(--ink);font-size:14px}
 .latest{max-width:640px;margin:56px auto 0;text-align:left}
@@ -48,7 +61,7 @@ hr{border:none;border-top:1px solid var(--line);margin:28px 0}
 .latest-title{margin:0 0 6px}
 .latest-title a{font-size:18px;font-weight:600}
 .latest-excerpt{font-size:15px;line-height:1.75;color:#4d5156;margin:0 0 8px}
-@media (max-width:600px){.hero{padding-top:44px}.wordmark{font-size:40px}.bar{gap:8px;padding:12px 0}nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%}nav::-webkit-scrollbar{display:none}nav a{white-space:nowrap;padding:6px 8px}h1{font-size:24px}h2{font-size:19px}}
+@media (max-width:600px){.hero{padding-top:44px}.hero-logo .logo-svg{width:252px}.bar{gap:8px;padding:12px 0}nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%}nav::-webkit-scrollbar{display:none}nav a{white-space:nowrap;padding:6px 8px}h1{font-size:24px}h2{font-size:19px}}
 .deal{border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:14px 0}
 .deal h3{margin:0 0 4px}
 .deal .tags{font-size:13px;color:var(--muted);margin:2px 0 8px}
@@ -74,16 +87,41 @@ footer p{margin:4px 0}
 </head>
 <body>
 <header><div class="wrap bar">
-<a class="brand" href="/"><span class="lg-b">Z</span><span class="lg-r">e</span><span class="lg-y">r</span><span class="lg-b">o</span><span class="lg-g">E</span><span class="lg-r">n</span><span class="lg-y">g</span><span class="lg-b">i</span><span class="lg-g">n</span><span class="lg-r">e</span><span class="lg-y">A</span><span class="lg-b">I</span><small>零擎智能</small></a>
+<a class="brand" href="/" aria-label="ZeroEngineAI 首页"><svg class="logo-svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 -1011 6286 1364">
+<title>ZeroEngineAI</title>
+<desc>ZeroEngineAI logotype, Nunito Bold. ZeroEngine blue #4285F4, AI red #EA4335. Letters are outlines; no font required.</desc>
+<path d="M106,0 Q81,0 65.5,10 Q50,20 44.5,37.5 Q39,55 44.5,76.5 Q50,98 67,121 L449,639 L449,598 L96,598 Q68,598 53.5,612 Q39,626 39,652 Q39,678 53.5,691.5 Q68,705 96,705 L510,705 Q535,705 550.5,695 Q566,685 571.5,668 Q577,651 571.5,629 Q566,607 549,584 L167,67 L167,107 L535,107 Q563,107 577.5,93.5 Q592,80 592,54 Q592,28 577.5,14 Q563,0 535,0 Z" fill="#4285F4" transform="translate(0.00,0) scale(1,-1)"/>
+<path d="M306,-10 Q223,-10 163,21 Q103,52 70.5,109 Q38,166 38,244 Q38,320 69.5,377 Q101,434 156.5,466.5 Q212,499 283,499 Q335,499 376.5,482 Q418,465 447.5,433 Q477,401 492.5,355.5 Q508,310 508,253 Q508,235 495.5,225.5 Q483,216 460,216 L139,216 L139,288 L420,288 L404,273 Q404,319 390.5,350 Q377,381 351.5,397.5 Q326,414 288,414 Q246,414 216.5,394.5 Q187,375 171.5,339.5 Q156,304 156,255 L156,248 Q156,166 194.5,125.5 Q233,85 308,85 Q334,85 366.5,91.5 Q399,98 428,114 Q449,126 465,124.5 Q481,123 490.5,113 Q500,103 502,88.5 Q504,74 496.5,59 Q489,44 471,33 Q436,11 390.5,0.5 Q345,-10 306,-10 Z" fill="#4285F4" transform="translate(605.00,0) scale(1,-1)"/>
+<path d="M129,-8 Q98,-8 81.5,8.5 Q65,25 65,56 L65,434 Q65,465 81,481 Q97,497 126,497 Q155,497 171,481 Q187,465 187,434 L187,371 L177,371 Q191,431 232,462 Q273,493 341,499 Q362,501 374.5,488.5 Q387,476 389,450 Q391,425 377.5,409.5 Q364,394 337,391 L315,389 Q254,383 223,351.5 Q192,320 192,263 L192,56 Q192,25 176,8.5 Q160,-8 129,-8 Z" fill="#4285F4" transform="translate(1132.00,0) scale(1,-1)"/>
+<path d="M288,-10 Q212,-10 156,21 Q100,52 69,109.5 Q38,167 38,245 Q38,304 55.5,350.5 Q73,397 106,430.5 Q139,464 185,481.5 Q231,499 288,499 Q364,499 420,468 Q476,437 507,380 Q538,323 538,245 Q538,186 520.5,139 Q503,92 470,58.5 Q437,25 391,7.5 Q345,-10 288,-10 Z M288,85 Q325,85 353,103 Q381,121 396.5,156.5 Q412,192 412,245 Q412,325 378,364.5 Q344,404 288,404 Q251,404 223,386.5 Q195,369 179.5,333.5 Q164,298 164,245 Q164,166 198,125.5 Q232,85 288,85 Z" fill="#4285F4" transform="translate(1524.00,0) scale(1,-1)"/>
+<path d="M145,0 Q112,0 94.5,17.5 Q77,35 77,68 L77,637 Q77,670 94.5,687.5 Q112,705 145,705 L502,705 Q527,705 540.5,692 Q554,679 554,655 Q554,630 540.5,616.5 Q527,603 502,603 L200,603 L200,409 L480,409 Q506,409 519,396 Q532,383 532,358 Q532,333 519,320 Q506,307 480,307 L200,307 L200,102 L502,102 Q527,102 540.5,89 Q554,76 554,51 Q554,26 540.5,13 Q527,0 502,0 Z" fill="#4285F4" transform="translate(2092.00,0) scale(1,-1)"/>
+<path d="M127,-8 Q97,-8 81,8.5 Q65,25 65,56 L65,434 Q65,465 81,481 Q97,497 126,497 Q155,497 171,481 Q187,465 187,434 L187,366 L176,391 Q198,444 244.5,471.5 Q291,499 350,499 Q409,499 447,477 Q485,455 504,410.5 Q523,366 523,298 L523,56 Q523,25 507,8.5 Q491,-8 461,-8 Q431,-8 414.5,8.5 Q398,25 398,56 L398,292 Q398,349 376.5,375 Q355,401 310,401 Q255,401 222.5,366.5 Q190,332 190,275 L190,56 Q190,-8 127,-8 Z" fill="#4285F4" transform="translate(2689.00,0) scale(1,-1)"/>
+<path d="M293,-190 Q239,-190 188.5,-180 Q138,-170 97,-149 Q78,-139 71.5,-125 Q65,-111 67.5,-96.5 Q70,-82 79.5,-71 Q89,-60 103,-56 Q117,-52 132,-60 Q176,-82 215.5,-88.5 Q255,-95 283,-95 Q350,-95 383.5,-62.5 Q417,-30 417,34 L417,124 L426,124 Q411,73 363.5,42.5 Q316,12 256,12 Q190,12 141,42.5 Q92,73 65,128 Q38,183 38,256 Q38,311 53.5,355.5 Q69,400 97.5,432 Q126,464 166.5,481.5 Q207,499 256,499 Q318,499 364.5,468.5 Q411,438 425,388 L415,363 L415,434 Q415,465 431.5,481 Q448,497 477,497 Q507,497 523,481 Q539,465 539,434 L539,49 Q539,-70 476,-130 Q413,-190 293,-190 Z M290,107 Q329,107 357,125 Q385,143 400.5,176.5 Q416,210 416,256 Q416,325 382,364.5 Q348,404 290,404 Q251,404 223,386 Q195,368 179.5,335 Q164,302 164,256 Q164,187 198,147 Q232,107 290,107 Z" fill="#4285F4" transform="translate(3274.00,0) scale(1,-1)"/>
+<path d="M127,-7 Q97,-7 81,11 Q65,29 65,61 L65,428 Q65,461 81,478.5 Q97,496 127,496 Q157,496 173.5,478.5 Q190,461 190,428 L190,61 Q190,29 174,11 Q158,-7 127,-7 Z M127,589 Q92,589 72.5,606.5 Q53,624 53,655 Q53,687 72.5,704 Q92,721 127,721 Q163,721 182,704 Q201,687 201,655 Q201,624 182,606.5 Q163,589 127,589 Z" fill="#4285F4" transform="translate(3878.00,0) scale(1,-1)"/>
+<path d="M127,-8 Q97,-8 81,8.5 Q65,25 65,56 L65,434 Q65,465 81,481 Q97,497 126,497 Q155,497 171,481 Q187,465 187,434 L187,366 L176,391 Q198,444 244.5,471.5 Q291,499 350,499 Q409,499 447,477 Q485,455 504,410.5 Q523,366 523,298 L523,56 Q523,25 507,8.5 Q491,-8 461,-8 Q431,-8 414.5,8.5 Q398,25 398,56 L398,292 Q398,349 376.5,375 Q355,401 310,401 Q255,401 222.5,366.5 Q190,332 190,275 L190,56 Q190,-8 127,-8 Z" fill="#4285F4" transform="translate(4133.00,0) scale(1,-1)"/>
+<path d="M306,-10 Q223,-10 163,21 Q103,52 70.5,109 Q38,166 38,244 Q38,320 69.5,377 Q101,434 156.5,466.5 Q212,499 283,499 Q335,499 376.5,482 Q418,465 447.5,433 Q477,401 492.5,355.5 Q508,310 508,253 Q508,235 495.5,225.5 Q483,216 460,216 L139,216 L139,288 L420,288 L404,273 Q404,319 390.5,350 Q377,381 351.5,397.5 Q326,414 288,414 Q246,414 216.5,394.5 Q187,375 171.5,339.5 Q156,304 156,255 L156,248 Q156,166 194.5,125.5 Q233,85 308,85 Q334,85 366.5,91.5 Q399,98 428,114 Q449,126 465,124.5 Q481,123 490.5,113 Q500,103 502,88.5 Q504,74 496.5,59 Q489,44 471,33 Q436,11 390.5,0.5 Q345,-10 306,-10 Z" fill="#4285F4" transform="translate(4718.00,0) scale(1,-1)"/>
+<path d="M84,-8 Q60,-8 45.5,3 Q31,14 28,32.5 Q25,51 35,74 L299,659 Q312,688 330.5,700.5 Q349,713 373,713 Q396,713 414.5,700.5 Q433,688 446,659 L711,74 Q722,51 719,32 Q716,13 702,2.5 Q688,-8 665,-8 Q637,-8 621.5,5.5 Q606,19 594,47 L529,198 L583,163 L161,163 L215,198 L151,47 Q138,18 124,5 Q110,-8 84,-8 Z M371,566 L231,233 L205,265 L539,265 L514,233 L373,566 Z" fill="#EA4335" transform="translate(5260.00,0) scale(1,-1)"/>
+<path d="M141,-8 Q110,-8 93.5,9.5 Q77,27 77,58 L77,647 Q77,679 93.5,696 Q110,713 141,713 Q172,713 188.5,696 Q205,679 205,647 L205,58 Q205,27 189,9.5 Q173,-8 141,-8 Z" fill="#EA4335" transform="translate(6004.00,0) scale(1,-1)"/>
+</svg>
+<small>零擎智能</small></a>
 <nav><a href="/">首页</a><a href="/chat/">AI 聊天</a><a href="/briefing/">财经早播报</a><a href="/deals/">每日优惠情报</a><a href="/research/">研究</a><a href="/about/" class="active">关于</a></nav>
 </div></header>
 <main><div class="wrap">
 
 <h1>关于零擎智能</h1>
+<div class="about-logo"><svg class="logo-svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 -1160 4000 1448">
+<title>零擎智能</title>
+<desc>零擎智能 logotype, Noto Sans SC Medium, all blue #4285F4. Characters are outlines; no font required.</desc>
+<path d="M131,807 L867,807 L867,738 L131,738 Z M195,584 L409,584 L409,530 L195,530 Z M174,485 L410,485 L410,427 L174,427 Z M586,485 L827,485 L827,427 L586,427 Z M586,584 L803,584 L803,530 L586,530 Z M451,779 L543,779 L543,476 L451,476 Z M69,691 L933,691 L933,511 L844,511 L844,629 L154,629 L154,511 L69,511 Z M762,219 L776,219 L789,223 L850,181 Q811,141 754.5,103 Q698,65 638.5,33 Q579,1 530,-20 Q520,-7 503.5,12 Q487,31 473,42 Q508,54 549,73 Q590,92 631,114.5 Q672,137 706.5,159.5 Q741,182 762,203 Z M275,50 L313,108 Q363,97 420,81 Q477,65 534.5,46.5 Q592,28 642,9 Q692,-10 729,-26 L690,-95 Q655,-78 605.5,-58.5 Q556,-39 499,-19 Q442,1 384.5,18.5 Q327,36 275,50 Z M166,219 L784,219 L784,149 L166,149 Z M422,290 L479,331 Q503,313 529.5,289.5 Q556,266 571,247 L511,202 Q498,221 472,246 Q446,271 422,290 Z M536,408 Q575,390 627.5,372 Q680,354 740,338.5 Q800,323 861,310.5 Q922,298 976,290 Q967,281 956,267 Q945,253 935,239.5 Q925,226 918,215 Q866,225 805.5,241 Q745,257 684,277.5 Q623,298 567.5,320.5 Q512,343 470,366 Z M511,460 L581,416 Q518,371 434,331.5 Q350,292 258.5,261.5 Q167,231 80,210 Q71,225 57,245.5 Q43,266 27,281 Q91,294 159,312 Q227,330 292,353.5 Q357,377 413.5,404 Q470,431 511,460 Z" fill="#4285F4" transform="translate(0.00,0) scale(1,-1)"/>
+<path d="M48,799 L518,799 L518,737 L48,737 Z M156,844 L235,844 L235,699 L156,699 Z M329,844 L409,844 L409,696 L329,696 Z M604,752 L949,752 L949,682 L604,682 Z M151,670 L433,670 L433,617 L151,617 Z M620,846 L698,829 Q674,750 634,679 Q594,608 546,560 Q540,567 528.5,577 Q517,587 504.5,596.5 Q492,606 483,612 Q530,654 565,716 Q600,778 620,846 Z M817,721 L904,712 Q877,624 823.5,562.5 Q770,501 695.5,460.5 Q621,420 529,394 Q525,403 516,416.5 Q507,430 497.5,442.5 Q488,455 480,463 Q566,483 634.5,516 Q703,549 750,599 Q797,649 817,721 Z M634,694 Q674,602 759,539 Q844,476 965,453 Q951,440 936,419 Q921,398 912,380 Q785,413 698.5,489 Q612,565 566,678 Z M143,582 L345,582 L345,438 L143,438 L143,485 L279,485 L279,535 L143,535 Z M408,670 L487,670 Q487,670 487,659 Q487,648 486,641 Q483,566 479,519.5 Q475,473 469,447.5 Q463,422 453,410 Q442,398 428.5,392.5 Q415,387 397,385 Q383,384 358,384 Q333,384 306,386 Q305,399 300,417.5 Q295,436 288,448 Q312,446 331,445 Q350,444 359,444 Q378,444 385,453 Q391,461 395,482.5 Q399,504 402,546.5 Q405,589 408,658 Z M133,708 L206,696 Q188,648 159,602.5 Q130,557 86,517 Q78,530 62.5,545 Q47,560 35,568 Q71,599 95.5,637 Q120,675 133,708 Z M118,582 L183,582 L183,408 L118,408 Z M121,245 L888,245 L888,178 L121,178 Z M52,126 L949,126 L949,57 L52,57 Z M454,340 L547,340 L547,7 Q547,-27 538,-44.5 Q529,-62 502,-72 Q477,-81 439,-83 Q401,-85 347,-84 Q343,-67 334,-45 Q325,-23 316,-7 Q341,-8 365.5,-8.5 Q390,-9 408.5,-8.5 Q427,-8 434,-8 Q454,-8 454,9 Z M767,386 L823,329 Q759,318 678.5,310.5 Q598,303 510,298.5 Q422,294 333.5,292.5 Q245,291 162,292 Q161,305 156,323 Q151,341 146,353 Q226,353 313,355 Q400,357 483.5,361 Q567,365 640,371 Q713,377 767,386 Z" fill="#4285F4" transform="translate(1000.00,0) scale(1,-1)"/>
+<path d="M187,334 L820,334 L820,-82 L723,-82 L723,258 L280,258 L280,-84 L187,-84 Z M242,180 L757,180 L757,109 L242,109 Z M158,765 L477,765 L477,690 L158,690 Z M46,607 L502,607 L502,532 L46,532 Z M242,28 L757,28 L757,-48 L242,-48 Z M247,741 L337,741 L337,636 Q337,600 328,557 Q319,514 294.5,470 Q270,426 222,384.5 Q174,343 96,307 Q87,322 69.5,341 Q52,360 36,371 Q110,400 152.5,434 Q195,468 215,504.5 Q235,541 241,575 Q247,609 247,638 Z M154,849 L239,831 Q220,766 187,706 Q154,646 117,605 Q109,611 95.5,620 Q82,629 67.5,637 Q53,645 42,650 Q81,687 109.5,740 Q138,793 154,849 Z M316,525 Q330,518 356,503.5 Q382,489 410.5,472 Q439,455 464,440 Q489,425 499,418 L433,356 Q419,368 395,385 Q371,402 345,421.5 Q319,441 294.5,458 Q270,475 253,485 Z M629,682 L629,488 L812,488 L812,682 Z M541,766 L906,766 L906,403 L541,403 Z" fill="#4285F4" transform="translate(2000.00,0) scale(1,-1)"/>
+<path d="M96,486 L413,486 L413,407 L184,407 L184,-83 L96,-83 Z M369,486 L462,486 L462,18 Q462,-15 454,-35 Q446,-55 423,-66 Q401,-77 367,-79.5 Q333,-82 287,-82 Q283,-63 274,-38 Q265,-13 255,4 Q287,3 314.5,2.5 Q342,2 353,3 Q362,3 365.5,6.5 Q369,10 369,19 Z M137,335 L420,335 L420,263 L137,263 Z M137,187 L420,187 L420,114 L137,114 Z M549,842 L642,842 L642,524 Q642,499 651,492 Q660,485 692,485 Q698,485 716.5,485 Q735,485 757.5,485 Q780,485 800,485 Q820,485 829,485 Q848,485 857,493 Q866,501 870.5,524.5 Q875,548 877,595 Q891,584 916,574 Q941,564 960,560 Q955,497 942.5,462.5 Q930,428 905,414.5 Q880,401 838,401 Q831,401 815,401 Q799,401 779,401 Q759,401 738.5,401 Q718,401 702.5,401 Q687,401 681,401 Q629,401 600,412 Q571,423 560,449.5 Q549,476 549,523 Z M853,774 L915,705 Q871,685 819,665.5 Q767,646 713,629 Q659,612 608,597 Q605,611 597,630.5 Q589,650 581,663 Q629,678 679,697 Q729,716 774.5,736 Q820,756 853,774 Z M550,375 L643,375 L643,47 Q643,22 653,14.5 Q663,7 695,7 Q702,7 721,7 Q740,7 762.5,7 Q785,7 805.5,7 Q826,7 835,7 Q855,7 864.5,16 Q874,25 878.5,52.5 Q883,80 885,134 Q901,124 925.5,114 Q950,104 969,99 Q964,30 951.5,-8 Q939,-46 913.5,-61 Q888,-76 843,-76 Q836,-76 820,-76 Q804,-76 783.5,-76 Q763,-76 742.5,-76 Q722,-76 706,-76 Q690,-76 683,-76 Q631,-76 602,-65 Q573,-54 561.5,-27.5 Q550,-1 550,47 Z M863,327 L926,257 Q883,232 829,210.5 Q775,189 718,170.5 Q661,152 608,137 Q605,151 596,171 Q587,191 580,204 Q630,220 682.5,240.5 Q735,261 782.5,283 Q830,305 863,327 Z M308,753 L387,784 Q413,750 437,711 Q461,672 481,633.5 Q501,595 510,565 L426,529 Q417,560 398,598.5 Q379,637 356,677.5 Q333,718 308,753 Z M85,546 Q83,556 77.5,572 Q72,588 65.5,605.5 Q59,623 53,635 Q65,638 76.5,648.5 Q88,659 101,675 Q109,685 126.5,711.5 Q144,738 164,773.5 Q184,809 199,847 L299,819 Q277,778 251,737 Q225,696 197,659.5 Q169,623 143,595 L143,594 Q143,594 134,589 Q125,584 114,576.5 Q103,569 94,561 Q85,553 85,546 Z M85,546 L83,610 L128,637 L447,657 Q443,641 440.5,619 Q438,597 438,584 Q351,577 292,572 Q233,567 195.5,563 Q158,559 136.5,556.5 Q115,554 103.5,551.5 Q92,549 85,546 Z" fill="#4285F4" transform="translate(3000.00,0) scale(1,-1)"/>
+</svg>
+</div>
 <p>零擎智能（ZeroEngineAI）是一家 AI 公司，做 AI 产品与财经内容。</p>
 <h2>产品</h2>
 <h3>报税鸭</h3>
-<p>微信小程序，面向小微企业的报税工具：只卖工具、不代办，数据只存用户手机本地。v1.0.0 已上线。</p>
+<p>微信小程序，面向小微企业的报税工具：只卖工具、不代办，数据只存用户手机本地。v1.0.0 已上线，售价 ¥9.9，微信搜索「报税鸭」即可使用。运营主体：东悦（广州）供应链管理有限公司。</p>
 <h3>AI 聊天</h3>
 <p>本站内置的 AI 聊天工具，<a href="/chat/">点此打开</a>。</p>
 <h3>财经内容</h3>
