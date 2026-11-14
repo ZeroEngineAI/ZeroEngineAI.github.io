@@ -151,9 +151,17 @@ footer p{margin:4px 0}
     note.textContent = '延时行情，数据来源 Yahoo Finance，更新于 ' + t.toLocaleTimeString('zh-CN', {hour12: false}) + '。仅供参考，不构成投资建议。';
   }
   function load() {
-    fetch(API).then(function (r) { if (!r.ok) throw new Error('http ' + r.status); return r.json(); })
+    // 10 秒超时：连接 hanging 时不等到底，显示可重试的提示，避免一直“加载中”。
+    var controller = new AbortController();
+    var timer = setTimeout(function () { controller.abort(); }, 10000);
+    fetch(API, { signal: controller.signal }).then(function (r) { if (!r.ok) throw new Error('http ' + r.status); return r.json(); })
       .then(render)
-      .catch(function () { el.innerHTML = '<p class="quotes-loading">行情暂不可用，请稍后刷新。</p>'; });
+      .catch(function () {
+        el.innerHTML = '<p class="quotes-loading">行情暂不可用，<a href="#" id="quotes-retry">点此重试</a>。</p>';
+        var retry = document.getElementById('quotes-retry');
+        if (retry) { retry.addEventListener('click', function (e) { e.preventDefault(); el.innerHTML = '<p class="quotes-loading">行情加载中…</p>'; load(); }); }
+      })
+      .finally(function () { clearTimeout(timer); });
   }
   load();
   setInterval(load, 60000);
