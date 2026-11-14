@@ -79,6 +79,13 @@ hr{border:none;border-top:1px solid var(--line);margin:28px 0}
 .archivelist .d{color:var(--muted);font-size:13px;margin-right:10px}
 .quotes{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin:14px 0}
 .quote{border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+a.quote{color:var(--ink);text-decoration:none;display:block;cursor:pointer}
+a.quote:hover{border-color:#999}
+a.quote:hover .qname{text-decoration:underline}
+.qdetail{border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:14px 0}
+.qdetail .qprice{font-size:32px}
+.qrow{display:flex;justify-content:space-between;font-size:14px;padding:6px 0;border-top:1px solid var(--line)}
+.qrow span:first-child{color:var(--muted)}
 .qname{font-size:14px;font-weight:600}
 .qmarket{font-size:12px;font-weight:400;color:var(--muted);margin-left:6px}
 .qprice{font-size:20px;font-weight:600;margin:4px 0 2px;font-variant-numeric:tabular-nums}

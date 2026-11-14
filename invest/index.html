@@ -79,6 +79,13 @@ hr{border:none;border-top:1px solid var(--line);margin:28px 0}
 .archivelist .d{color:var(--muted);font-size:13px;margin-right:10px}
 .quotes{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin:14px 0}
 .quote{border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+a.quote{color:var(--ink);text-decoration:none;display:block;cursor:pointer}
+a.quote:hover{border-color:#999}
+a.quote:hover .qname{text-decoration:underline}
+.qdetail{border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:14px 0}
+.qdetail .qprice{font-size:32px}
+.qrow{display:flex;justify-content:space-between;font-size:14px;padding:6px 0;border-top:1px solid var(--line)}
+.qrow span:first-child{color:var(--muted)}
 .qname{font-size:14px;font-weight:600}
 .qmarket{font-size:12px;font-weight:400;color:var(--muted);margin-left:6px}
 .qprice{font-size:20px;font-weight:600;margin:4px 0 2px;font-variant-numeric:tabular-nums}
@@ -118,10 +125,6 @@ footer p{margin:4px 0}
 
 <h1>投资</h1>
 <p class="meta">江遇资本投资理念与方法：只讲理念与方法，不晒持仓、收益与组合数据。内容仅供参考，不构成投资建议。</p>
-<h2>投资理念</h2>
-<p><strong>长期复利。</strong>以长期视角看待投资，相信时间的力量，追求复利积累而非短期波动。</p>
-<p><strong>财报周期裁决。</strong>以财报周期为决策节奏，用财报数据裁决持仓去留。</p>
-<p><strong>因子纪律。</strong>以因子纪律约束决策，避免情绪化交易。</p>
 <h2>市场行情</h2>
 <div id="quotes" class="quotes"><p class="quotes-loading">行情加载中…</p></div>
 <p class="quotes-note" id="quotes-note"></p>
@@ -130,21 +133,23 @@ footer p{margin:4px 0}
   var API = 'https://chat.zeroengineai.com/api/quotes';
   var el = document.getElementById('quotes');
   var note = document.getElementById('quotes-note');
+  var SLUGS = {'^GSPC': 'sp500', '^DJI': 'dji', '^IXIC': 'nasdaq', '^HSI': 'hsi', '000001.SS': 'shanghai', '399001.SZ': 'shenzhen', '399006.SZ': 'chinext', 'GC=F': 'gold', 'CL=F': 'oil', 'BTC-USD': 'btc'};
   function fmt(n) { return n.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
   function render(data) {
     var html = '';
     data.quotes.forEach(function (q) {
+      var href = SLUGS[q.symbol] ? '/invest/' + SLUGS[q.symbol] + '/' : '/invest/';
       if (!q.ok) {
-        html += '<div class="quote"><div class="qname">' + q.name + '<span class="qmarket">' + q.market + '</span></div><div class="qprice">—</div><div class="qchg flat">暂无数据</div></div>';
+        html += '<a class="quote" href="' + href + '"><div class="qname">' + q.name + '<span class="qmarket">' + q.market + '</span></div><div class="qprice">—</div><div class="qchg flat">暂无数据</div></a>';
         return;
       }
       var up = q.change_pct > 0, down = q.change_pct < 0;
       var cls = up ? 'up' : (down ? 'down' : 'flat');
       var arrow = up ? '▲' : (down ? '▼' : '');
       var sign = up ? '+' : '';
-      html += '<div class="quote"><div class="qname">' + q.name + '<span class="qmarket">' + q.market + '</span></div>'
+      html += '<a class="quote" href="' + href + '"><div class="qname">' + q.name + '<span class="qmarket">' + q.market + '</span></div>'
         + '<div class="qprice">' + fmt(q.price) + '</div>'
-        + '<div class="qchg ' + cls + '">' + arrow + ' ' + sign + fmt(q.change) + ' (' + sign + q.change_pct.toFixed(2) + '%)</div></div>';
+        + '<div class="qchg ' + cls + '">' + arrow + ' ' + sign + fmt(q.change) + ' (' + sign + q.change_pct.toFixed(2) + '%)</div></a>';
     });
     el.innerHTML = html;
     var t = new Date(data.updated_at);
@@ -167,6 +172,10 @@ footer p{margin:4px 0}
   setInterval(load, 60000);
 })();
 </script>
+<h2>投资理念</h2>
+<p><strong>长期复利。</strong>以长期视角看待投资，相信时间的力量，追求复利积累而非短期波动。</p>
+<p><strong>财报周期裁决。</strong>以财报周期为决策节奏，用财报数据裁决持仓去留。</p>
+<p><strong>因子纪律。</strong>以因子纪律约束决策，避免情绪化交易。</p>
 <h2>栏目</h2>
 <ul>
 <li><a href="/briefing/">全球财经早播报</a>——每天早上播报过去 24 小时全球财经新闻。</li>
