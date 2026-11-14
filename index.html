@@ -1,1 +1,93 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#ffffff"><meta name="description" content="ZeroEngineAI · 零擎智能 — 基于 DeepSeek API 的聊天界面"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='34' font-weight='bold' fill='%23fff' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E"><title>ZeroEngineAI</title><meta content="0.1.1" name="application-version"><script defer src="static/js/main.11654642.js"></script><link href="static/css/main.7361e32c.css" rel="stylesheet"></head><body><div id="root"></div></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>零擎智能 · 零擎智能 ZeroEngineAI</title>
+<meta name="description" content="零擎智能 ZeroEngineAI：AI 产品与财经内容">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='36' font-weight='700' fill='%23fff' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E">
+<style>
+:root{--ink:#1a1a1a;--muted:#666;--line:#e5e5e5;--bg:#fff;--soft:#f7f7f5;--dark:#111;--accent:#0b5fff}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--bg);line-height:1.75;font-size:16px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+header{background:var(--dark);color:#fff}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0;flex-wrap:wrap}
+.brand{font-size:20px;font-weight:700;color:#fff;letter-spacing:.2px}
+.brand small{font-size:12px;font-weight:400;color:#aaa;margin-left:8px}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{color:#ddd;padding:6px 12px;border-radius:6px;font-size:14px}
+nav a:hover{color:#fff;text-decoration:none;background:#222}
+nav a.active{color:#fff;background:#2a2a2a}
+main{padding:32px 0 48px}
+h1{font-size:28px;line-height:1.35;margin:0 0 8px}
+h2{font-size:21px;margin:32px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin:24px 0 8px}
+p{margin:10px 0}
+ul,ol{margin:10px 0;padding-left:24px}
+li{margin:5px 0}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:14px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--soft)}
+blockquote{margin:14px 0;padding:10px 16px;background:var(--soft);border-left:3px solid #ccc;color:var(--muted)}
+hr{border:none;border-top:1px solid var(--line);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin:0 0 18px}
+.hero{padding:36px 0 8px}
+.hero h1{font-size:34px}
+.hero p{color:var(--muted);font-size:17px;max-width:640px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:28px 0}
+.card{border:1px solid var(--line);border-radius:10px;padding:18px 20px;background:#fff}
+.card h3{margin:0 0 6px;font-size:18px}
+.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+.card a{font-size:14px}
+.deal{border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:14px 0}
+.deal h3{margin:0 0 4px}
+.deal .tags{font-size:13px;color:var(--muted);margin:2px 0 8px}
+.deal p{margin:6px 0;font-size:15px}
+.badge{display:inline-block;font-size:12px;padding:1px 8px;border-radius:20px;background:#eef4ff;color:#0b5fff;margin-left:8px;vertical-align:middle}
+.badge.expired{background:#f5f5f5;color:#888}
+.badge.info{background:#fff7e6;color:#9a6b00}
+.risk{font-size:13px;color:#8a5a00;background:#fffaf0;border:1px solid #f0e2c0;border-radius:6px;padding:8px 12px;margin-top:8px}
+.catnav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+.catnav a{font-size:13px;border:1px solid var(--line);border-radius:20px;padding:4px 12px;color:var(--ink)}
+.catnav a:hover{border-color:#999;text-decoration:none}
+.archivelist{list-style:none;padding:0}
+.archivelist li{padding:10px 0;border-bottom:1px solid var(--line)}
+.archivelist .d{color:var(--muted);font-size:13px;margin-right:10px}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding:22px 0 34px}
+footer p{margin:4px 0}
+.back{font-size:14px}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+<a class="brand" href="/">ZeroEngineAI<small>零擎智能</small></a>
+<nav><a href="/" class="active">首页</a><a href="/chat/">AI 聊天</a><a href="/briefing/">财经早播报</a><a href="/deals/">每日优惠情报</a><a href="/research/">研究</a><a href="/about/">关于</a></nav>
+</div></header>
+<main><div class="wrap">
+
+<div class="hero">
+<h1>零擎智能 ZeroEngineAI</h1>
+<p>AI 产品与财经内容。AI 聊天工具、每日全球财经早播报、优惠情报与行业研究，都在这里。</p>
+</div>
+<div class="cards">
+<div class="card"><h3>AI 聊天</h3><p>打开就能聊的 AI 助手，免费使用。</p><p><a href="/chat/">开始聊天 →</a></p></div>
+<div class="card"><h3>财经早播报</h3><p>每天早上，过去 24 小时全球财经新闻深度播报。</p><p><a href="/briefing/">查看播报 →</a></p></div>
+<div class="card"><h3>每日优惠情报</h3><p>免费 VPS、AI 订阅、空投、U 卡、海外银行与电话卡。</p><p><a href="/deals/">查看情报 →</a></p></div>
+<div class="card"><h3>研究</h3><p>宠物用品与猫咪毛发护理市场调研，数字注明来源与口径。</p><p><a href="/research/">查看研究 →</a></p></div>
+</div>
+
+<h2>最新早播报</h2>
+<p><a href="/briefing/2026-11-14.html">全球财经早播报 · 11月14日 星期六</a></p>
+<p>美股周五涨跌互现。道指涨0.10%，报52,347.55点；标普500跌0.40%，报7,561.67点；纳斯达克跌0.91%，报25,136.27点；罗素2000跌0.31%，报2,790.49点；恐慌指数VIX涨约3.2%，报19.30（来源：stockmarketwatch、swingfolio、The Trade Signal）。全周来看三大指数仍收涨：纳指周涨约2.3%，标普500涨约2.5%，道指涨约2.1%（来源：CNBC…</p>
+<p><a href="/briefing/">全部早播报 →</a></p>
+
+</div></main>
+<footer><div class="wrap">
+<p>© 2026 零擎智能 ZeroEngineAI</p>
+<p>本站内容仅供参考，不构成投资建议。优惠信息以商家官方页面为准，条款可能随时变更。</p>
+</div></footer>
+</body>
+</html>
