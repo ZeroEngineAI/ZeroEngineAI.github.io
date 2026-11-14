@@ -77,6 +77,15 @@ hr{border:none;border-top:1px solid var(--line);margin:28px 0}
 .archivelist{list-style:none;padding:0}
 .archivelist li{padding:10px 0;border-bottom:1px solid var(--line)}
 .archivelist .d{color:var(--muted);font-size:13px;margin-right:10px}
+.quotes{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin:14px 0}
+.quote{border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.qname{font-size:14px;font-weight:600}
+.qmarket{font-size:12px;font-weight:400;color:var(--muted);margin-left:6px}
+.qprice{font-size:20px;font-weight:600;margin:4px 0 2px;font-variant-numeric:tabular-nums}
+.qchg{font-size:13px;font-variant-numeric:tabular-nums}
+.qchg.up{color:#d93025}.qchg.down{color:#188038}.qchg.flat{color:var(--muted)}
+.quotes-loading{color:var(--muted);font-size:14px}
+.quotes-note{color:var(--muted);font-size:13px}
 footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding:22px 0 34px;text-align:center}
 footer p{margin:4px 0}
 .back{font-size:14px}
@@ -113,6 +122,43 @@ footer p{margin:4px 0}
 <p><strong>长期复利。</strong>以长期视角看待投资，相信时间的力量，追求复利积累而非短期波动。</p>
 <p><strong>财报周期裁决。</strong>以财报周期为决策节奏，用财报数据裁决持仓去留。</p>
 <p><strong>因子纪律。</strong>以因子纪律约束决策，避免情绪化交易。</p>
+<h2>市场行情</h2>
+<div id="quotes" class="quotes"><p class="quotes-loading">行情加载中…</p></div>
+<p class="quotes-note" id="quotes-note"></p>
+<script>
+(function () {
+  var API = 'https://chat.zeroengineai.com/api/quotes';
+  var el = document.getElementById('quotes');
+  var note = document.getElementById('quotes-note');
+  function fmt(n) { return n.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
+  function render(data) {
+    var html = '';
+    data.quotes.forEach(function (q) {
+      if (!q.ok) {
+        html += '<div class="quote"><div class="qname">' + q.name + '<span class="qmarket">' + q.market + '</span></div><div class="qprice">—</div><div class="qchg flat">暂无数据</div></div>';
+        return;
+      }
+      var up = q.change_pct > 0, down = q.change_pct < 0;
+      var cls = up ? 'up' : (down ? 'down' : 'flat');
+      var arrow = up ? '▲' : (down ? '▼' : '');
+      var sign = up ? '+' : '';
+      html += '<div class="quote"><div class="qname">' + q.name + '<span class="qmarket">' + q.market + '</span></div>'
+        + '<div class="qprice">' + fmt(q.price) + '</div>'
+        + '<div class="qchg ' + cls + '">' + arrow + ' ' + sign + fmt(q.change) + ' (' + sign + q.change_pct.toFixed(2) + '%)</div></div>';
+    });
+    el.innerHTML = html;
+    var t = new Date(data.updated_at);
+    note.textContent = '延时行情，数据来源 Yahoo Finance，更新于 ' + t.toLocaleTimeString('zh-CN', {hour12: false}) + '。仅供参考，不构成投资建议。';
+  }
+  function load() {
+    fetch(API).then(function (r) { if (!r.ok) throw new Error('http ' + r.status); return r.json(); })
+      .then(render)
+      .catch(function () { el.innerHTML = '<p class="quotes-loading">行情暂不可用，请稍后刷新。</p>'; });
+  }
+  load();
+  setInterval(load, 60000);
+})();
+</script>
 <h2>栏目</h2>
 <ul>
 <li><a href="/briefing/">全球财经早播报</a>——每天早上播报过去 24 小时全球财经新闻。</li>
