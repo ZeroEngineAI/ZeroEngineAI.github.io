@@ -74,6 +74,10 @@ hr{border:none;border-top:1px solid var(--line);margin:28px 0}
 .catnav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
 .catnav a{font-size:13px;border:1px solid var(--line);border-radius:20px;padding:4px 12px;color:var(--ink)}
 .catnav a:hover{border-color:#999;text-decoration:none}
+.invtabs{display:flex;gap:2px;border-bottom:1px solid var(--line);margin:6px 0 18px;overflow-x:auto}
+.invtabs a{font-size:15px;padding:8px 14px;color:var(--muted);white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-1px}
+.invtabs a:hover{text-decoration:none;color:var(--ink)}
+.invtabs a.active{color:var(--ink);font-weight:600;border-bottom-color:#4285F4}
 .archivelist{list-style:none;padding:0}
 .archivelist li{padding:10px 0;border-bottom:1px solid var(--line)}
 .archivelist .d{color:var(--muted);font-size:13px;margin-right:10px}
@@ -122,7 +126,7 @@ footer p{margin:4px 0}
 <nav><a href="/">首页</a><a href="/ai/">AI</a><a href="/invest/" class="active">投资</a><a href="/lab/">LAB</a><a href="/about/">关于</a><a class="chatlink" href="/chat/">AI 聊天</a></nav>
 </div></header>
 <main><div class="wrap">
-<h1>雪球要点</h1><p class="meta">每天汇总雪球上值得读的文章与大 V 核心观点，篇篇附原文链接，点进去就是雪球详情。内容为作者个人观点，不构成投资建议。</p><ul class="archivelist"><li><span class="d">2026-11-14</span><a href="/invest/xueqiu/2026-11-14/">雪球要点 · 2026-11-14</a><br><span class="d">9 篇</span></li></ul><p><a href="/invest/">← 返回投资</a></p>
+<h1>雪球要点</h1><nav class="invtabs"><a href="/invest/">市场行情</a><a href="/invest/xueqiu/" class="active">雪球要点</a><a href="/invest/memos/">投资备忘录</a><a href="/research/">研究</a></nav><p class="meta">每天汇总雪球上值得读的文章与大 V 核心观点，篇篇附原文链接，点进去就是雪球详情。内容为作者个人观点，不构成投资建议。</p><ul class="archivelist"><li><span class="d">2026-11-14</span><a href="/invest/xueqiu/2026-11-14/">雪球要点 · 2026-11-14</a><br><span class="d">9 篇</span></li></ul><p><a href="/invest/">← 返回投资</a></p>
 </div></main>
 <footer><div class="wrap">
 <p class="footlinks"><a href="/">首页</a><a href="/ai/">AI</a><a href="/invest/">投资</a><a href="/lab/">LAB</a><a href="/about/">关于</a><a href="/chat/">AI 聊天</a></p>
