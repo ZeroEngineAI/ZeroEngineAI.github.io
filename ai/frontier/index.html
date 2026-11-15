@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 前沿 · 零擎智能 ZeroEngineAI</title>
+<meta name="description" content="零擎智能 AI 前沿：我们的判断与计划">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+:root{--ink:#202124;--muted:#5f6368;--line:#dadce0;--bg:#fff;--soft:#f8f9fa;--accent:#1a73e8}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--bg);line-height:1.75;font-size:16px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0;flex-wrap:wrap}
+.brand{display:inline-flex;align-items:center;font-size:17px;font-weight:600;color:var(--ink);letter-spacing:.2px}
+.brand:hover{text-decoration:none}
+.brand small{font-size:12px;font-weight:500;color:#4285F4;margin-left:8px}
+.logo-svg{display:block}
+.brand .logo-svg{height:22px;width:auto}
+.hero-logo{margin:0}
+.hero-logo .logo-svg{width:320px;height:auto;margin:0 auto}
+.about-logo{margin:4px 0 2px}
+.about-logo .logo-svg{width:200px;height:auto}
+.notfound{text-align:center;padding:48px 0}
+.notfound-logo .logo-svg{width:180px;height:auto;margin:0 auto 20px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{color:var(--ink);padding:6px 10px;font-size:14px}
+nav a:hover{color:var(--ink);text-decoration:underline}
+nav a.active{color:var(--ink);font-weight:600}
+nav a.chatlink{border:1px solid var(--line);border-radius:999px;padding:6px 14px;margin-left:8px}
+nav a.chatlink:hover{border-color:#999;text-decoration:none}
+main{padding:32px 0 48px}
+h1{font-size:28px;line-height:1.35;margin:0 0 8px}
+h2{font-size:21px;margin:32px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin:24px 0 8px}
+p{margin:10px 0}
+ul,ol{margin:10px 0;padding-left:24px}
+li{margin:5px 0}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:14px;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--soft)}
+blockquote{margin:14px 0;padding:10px 16px;background:var(--soft);border-left:3px solid #ccc;color:var(--muted)}
+hr{border:none;border-top:1px solid var(--line);margin:28px 0}
+.meta{color:var(--muted);font-size:14px;margin:0 0 18px}
+.hero{text-align:center;padding:72px 0 8px}
+.tagline{color:var(--muted);font-size:16px;margin:10px 0 0}
+.dir-b{color:#4285F4;font-weight:600}.dir-r{color:#EA4335;font-weight:600}.dir-g{color:#34A853;font-weight:600}
+.searchbox{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:584px;height:50px;margin:30px auto 0;padding:0 22px;border:1px solid #dfe1e5;border-radius:999px;color:#9aa0a6;font-size:16px;box-shadow:0 1px 6px rgba(32,33,36,.12)}
+.searchbox:hover{box-shadow:0 1px 8px rgba(32,33,36,.2)}
+.searchbox input{flex:1;min-width:0;border:0;outline:0;background:transparent;font:inherit;color:var(--ink)}
+.searchbox input::placeholder{color:#9aa0a6}
+.searchbox button{border:0;background:none;color:var(--accent);font-size:18px;cursor:pointer;padding:0 2px;line-height:1}
+.product{max-width:640px;margin:48px auto 0;text-align:left;border:1px solid var(--line);border-radius:12px;padding:16px 20px;background:var(--soft)}
+.product p{margin:0;font-size:15px;line-height:1.8}
+.product .pname{font-weight:700}
+.product .price{font-weight:700}
+.latest{max-width:640px;margin:56px auto 0;text-align:left}
+.latest h2{font-size:15px;color:var(--muted);font-weight:600;border-bottom:none;margin:0 0 10px;padding-bottom:0}
+.latest-title{margin:0 0 6px}
+.latest-title a{font-size:18px;font-weight:600}
+.latest-excerpt{font-size:15px;line-height:1.75;color:#4d5156;margin:0 0 8px}
+@media (max-width:600px){.hero{padding-top:44px}.hero-logo .logo-svg{width:252px}.bar{gap:8px;padding:12px 0}nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%}nav::-webkit-scrollbar{display:none}nav a{white-space:nowrap;padding:6px 8px}h1{font-size:24px}h2{font-size:19px}}
+.deal{border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:14px 0}
+.deal h3{margin:0 0 4px}
+.deal .tags{font-size:13px;color:var(--muted);margin:2px 0 8px}
+.deal p{margin:6px 0;font-size:15px}
+.badge{display:inline-block;font-size:12px;padding:1px 8px;border-radius:20px;background:#eef4ff;color:#1a73e8;margin-left:8px;vertical-align:middle}
+.badge.expired{background:#f5f5f5;color:#888}
+.badge.info{background:#fff7e6;color:#9a6b00}
+.risk{font-size:13px;color:#8a5a00;background:#fffaf0;border:1px solid #f0e2c0;border-radius:6px;padding:8px 12px;margin-top:8px}
+.catnav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+.catnav a{font-size:13px;border:1px solid var(--line);border-radius:20px;padding:4px 12px;color:var(--ink)}
+.catnav a:hover{border-color:#999;text-decoration:none}
+.invtabs{display:flex;gap:2px;border-bottom:1px solid var(--line);margin:6px 0 18px;overflow-x:auto}
+.invtabs a{font-size:15px;padding:8px 14px;color:var(--muted);white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-1px}
+.invtabs a:hover{text-decoration:none;color:var(--ink)}
+.invtabs a.active{color:var(--ink);font-weight:600;border-bottom-color:#4285F4}
+.archivelist{list-style:none;padding:0}
+.archivelist li{padding:10px 0;border-bottom:1px solid var(--line)}
+.archivelist .d{color:var(--muted);font-size:13px;margin-right:10px}
+.quotes{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin:14px 0}
+.quote{border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+a.quote{color:var(--ink);text-decoration:none;display:block;cursor:pointer}
+a.quote:hover{border-color:#999}
+a.quote:hover .qname{text-decoration:underline}
+.qdetail{border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:14px 0}
+.qdetail .qprice{font-size:32px}
+.qrow{display:flex;justify-content:space-between;font-size:14px;padding:6px 0;border-top:1px solid var(--line)}
+.qrow span:first-child{color:var(--muted)}
+.qname{font-size:14px;font-weight:600}
+.qmarket{font-size:12px;font-weight:400;color:var(--muted);margin-left:6px}
+.qprice{font-size:20px;font-weight:600;margin:4px 0 2px;font-variant-numeric:tabular-nums}
+.qchg{font-size:13px;font-variant-numeric:tabular-nums}
+.qchg.up{color:#d93025}.qchg.down{color:#188038}.qchg.flat{color:var(--muted)}
+.quotes-loading{color:var(--muted);font-size:14px}
+.quotes-note{color:var(--muted);font-size:13px}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding:22px 0 34px;text-align:center}
+footer p{margin:4px 0}
+.back{font-size:14px}
+.footlinks{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-bottom:8px}
+.footlinks a{color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+<a class="brand" href="/" aria-label="ZeroEngineAI 首页"><svg class="logo-svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 -1011 6286 1364">
+<title>ZeroEngineAI</title>
+<desc>ZeroEngineAI logotype, Nunito Bold. ZeroEngine blue #4285F4 with capital E green #34A853, AI red #EA4335. Letters are outlines; no font required.</desc>
+<path d="M106,0 Q81,0 65.5,10 Q50,20 44.5,37.5 Q39,55 44.5,76.5 Q50,98 67,121 L449,639 L449,598 L96,598 Q68,598 53.5,612 Q39,626 39,652 Q39,678 53.5,691.5 Q68,705 96,705 L510,705 Q535,705 550.5,695 Q566,685 571.5,668 Q577,651 571.5,629 Q566,607 549,584 L167,67 L167,107 L535,107 Q563,107 577.5,93.5 Q592,80 592,54 Q592,28 577.5,14 Q563,0 535,0 Z" fill="#4285F4" transform="translate(0.00,0) scale(1,-1)"/>
+<path d="M306,-10 Q223,-10 163,21 Q103,52 70.5,109 Q38,166 38,244 Q38,320 69.5,377 Q101,434 156.5,466.5 Q212,499 283,499 Q335,499 376.5,482 Q418,465 447.5,433 Q477,401 492.5,355.5 Q508,310 508,253 Q508,235 495.5,225.5 Q483,216 460,216 L139,216 L139,288 L420,288 L404,273 Q404,319 390.5,350 Q377,381 351.5,397.5 Q326,414 288,414 Q246,414 216.5,394.5 Q187,375 171.5,339.5 Q156,304 156,255 L156,248 Q156,166 194.5,125.5 Q233,85 308,85 Q334,85 366.5,91.5 Q399,98 428,114 Q449,126 465,124.5 Q481,123 490.5,113 Q500,103 502,88.5 Q504,74 496.5,59 Q489,44 471,33 Q436,11 390.5,0.5 Q345,-10 306,-10 Z" fill="#4285F4" transform="translate(605.00,0) scale(1,-1)"/>
+<path d="M129,-8 Q98,-8 81.5,8.5 Q65,25 65,56 L65,434 Q65,465 81,481 Q97,497 126,497 Q155,497 171,481 Q187,465 187,434 L187,371 L177,371 Q191,431 232,462 Q273,493 341,499 Q362,501 374.5,488.5 Q387,476 389,450 Q391,425 377.5,409.5 Q364,394 337,391 L315,389 Q254,383 223,351.5 Q192,320 192,263 L192,56 Q192,25 176,8.5 Q160,-8 129,-8 Z" fill="#4285F4" transform="translate(1132.00,0) scale(1,-1)"/>
+<path d="M288,-10 Q212,-10 156,21 Q100,52 69,109.5 Q38,167 38,245 Q38,304 55.5,350.5 Q73,397 106,430.5 Q139,464 185,481.5 Q231,499 288,499 Q364,499 420,468 Q476,437 507,380 Q538,323 538,245 Q538,186 520.5,139 Q503,92 470,58.5 Q437,25 391,7.5 Q345,-10 288,-10 Z M288,85 Q325,85 353,103 Q381,121 396.5,156.5 Q412,192 412,245 Q412,325 378,364.5 Q344,404 288,404 Q251,404 223,386.5 Q195,369 179.5,333.5 Q164,298 164,245 Q164,166 198,125.5 Q232,85 288,85 Z" fill="#4285F4" transform="translate(1524.00,0) scale(1,-1)"/>
+<path d="M145,0 Q112,0 94.5,17.5 Q77,35 77,68 L77,637 Q77,670 94.5,687.5 Q112,705 145,705 L502,705 Q527,705 540.5,692 Q554,679 554,655 Q554,630 540.5,616.5 Q527,603 502,603 L200,603 L200,409 L480,409 Q506,409 519,396 Q532,383 532,358 Q532,333 519,320 Q506,307 480,307 L200,307 L200,102 L502,102 Q527,102 540.5,89 Q554,76 554,51 Q554,26 540.5,13 Q527,0 502,0 Z" fill="#34A853" transform="translate(2092.00,0) scale(1,-1)"/>
+<path d="M127,-8 Q97,-8 81,8.5 Q65,25 65,56 L65,434 Q65,465 81,481 Q97,497 126,497 Q155,497 171,481 Q187,465 187,434 L187,366 L176,391 Q198,444 244.5,471.5 Q291,499 350,499 Q409,499 447,477 Q485,455 504,410.5 Q523,366 523,298 L523,56 Q523,25 507,8.5 Q491,-8 461,-8 Q431,-8 414.5,8.5 Q398,25 398,56 L398,292 Q398,349 376.5,375 Q355,401 310,401 Q255,401 222.5,366.5 Q190,332 190,275 L190,56 Q190,-8 127,-8 Z" fill="#4285F4" transform="translate(2689.00,0) scale(1,-1)"/>
+<path d="M293,-190 Q239,-190 188.5,-180 Q138,-170 97,-149 Q78,-139 71.5,-125 Q65,-111 67.5,-96.5 Q70,-82 79.5,-71 Q89,-60 103,-56 Q117,-52 132,-60 Q176,-82 215.5,-88.5 Q255,-95 283,-95 Q350,-95 383.5,-62.5 Q417,-30 417,34 L417,124 L426,124 Q411,73 363.5,42.5 Q316,12 256,12 Q190,12 141,42.5 Q92,73 65,128 Q38,183 38,256 Q38,311 53.5,355.5 Q69,400 97.5,432 Q126,464 166.5,481.5 Q207,499 256,499 Q318,499 364.5,468.5 Q411,438 425,388 L415,363 L415,434 Q415,465 431.5,481 Q448,497 477,497 Q507,497 523,481 Q539,465 539,434 L539,49 Q539,-70 476,-130 Q413,-190 293,-190 Z M290,107 Q329,107 357,125 Q385,143 400.5,176.5 Q416,210 416,256 Q416,325 382,364.5 Q348,404 290,404 Q251,404 223,386 Q195,368 179.5,335 Q164,302 164,256 Q164,187 198,147 Q232,107 290,107 Z" fill="#4285F4" transform="translate(3274.00,0) scale(1,-1)"/>
+<path d="M127,-7 Q97,-7 81,11 Q65,29 65,61 L65,428 Q65,461 81,478.5 Q97,496 127,496 Q157,496 173.5,478.5 Q190,461 190,428 L190,61 Q190,29 174,11 Q158,-7 127,-7 Z M127,589 Q92,589 72.5,606.5 Q53,624 53,655 Q53,687 72.5,704 Q92,721 127,721 Q163,721 182,704 Q201,687 201,655 Q201,624 182,606.5 Q163,589 127,589 Z" fill="#4285F4" transform="translate(3878.00,0) scale(1,-1)"/>
+<path d="M127,-8 Q97,-8 81,8.5 Q65,25 65,56 L65,434 Q65,465 81,481 Q97,497 126,497 Q155,497 171,481 Q187,465 187,434 L187,366 L176,391 Q198,444 244.5,471.5 Q291,499 350,499 Q409,499 447,477 Q485,455 504,410.5 Q523,366 523,298 L523,56 Q523,25 507,8.5 Q491,-8 461,-8 Q431,-8 414.5,8.5 Q398,25 398,56 L398,292 Q398,349 376.5,375 Q355,401 310,401 Q255,401 222.5,366.5 Q190,332 190,275 L190,56 Q190,-8 127,-8 Z" fill="#4285F4" transform="translate(4133.00,0) scale(1,-1)"/>
+<path d="M306,-10 Q223,-10 163,21 Q103,52 70.5,109 Q38,166 38,244 Q38,320 69.5,377 Q101,434 156.5,466.5 Q212,499 283,499 Q335,499 376.5,482 Q418,465 447.5,433 Q477,401 492.5,355.5 Q508,310 508,253 Q508,235 495.5,225.5 Q483,216 460,216 L139,216 L139,288 L420,288 L404,273 Q404,319 390.5,350 Q377,381 351.5,397.5 Q326,414 288,414 Q246,414 216.5,394.5 Q187,375 171.5,339.5 Q156,304 156,255 L156,248 Q156,166 194.5,125.5 Q233,85 308,85 Q334,85 366.5,91.5 Q399,98 428,114 Q449,126 465,124.5 Q481,123 490.5,113 Q500,103 502,88.5 Q504,74 496.5,59 Q489,44 471,33 Q436,11 390.5,0.5 Q345,-10 306,-10 Z" fill="#4285F4" transform="translate(4718.00,0) scale(1,-1)"/>
+<path d="M84,-8 Q60,-8 45.5,3 Q31,14 28,32.5 Q25,51 35,74 L299,659 Q312,688 330.5,700.5 Q349,713 373,713 Q396,713 414.5,700.5 Q433,688 446,659 L711,74 Q722,51 719,32 Q716,13 702,2.5 Q688,-8 665,-8 Q637,-8 621.5,5.5 Q606,19 594,47 L529,198 L583,163 L161,163 L215,198 L151,47 Q138,18 124,5 Q110,-8 84,-8 Z M371,566 L231,233 L205,265 L539,265 L514,233 L373,566 Z" fill="#EA4335" transform="translate(5260.00,0) scale(1,-1)"/>
+<path d="M141,-8 Q110,-8 93.5,9.5 Q77,27 77,58 L77,647 Q77,679 93.5,696 Q110,713 141,713 Q172,713 188.5,696 Q205,679 205,647 L205,58 Q205,27 189,9.5 Q173,-8 141,-8 Z" fill="#EA4335" transform="translate(6004.00,0) scale(1,-1)"/>
+</svg>
+<small>零擎智能</small></a>
+<nav><a href="/">首页</a><a href="/ai/">AI</a><a href="/invest/">投资</a><a href="/lab/">创业</a></nav>
+</div></header>
+<main><div class="wrap">
+<h1>AI 前沿</h1><nav class="invtabs"><a href="/ai/">AI 首页</a><a href="/ai/frontier/" class="active">前沿</a><a href="/ai/free/">免费资源</a></nav>
+<p>我们的判断与计划。基于 2026 年 11 月 16 日的公开资料调研；价格为当日厂商定价页快照，基准分除注明独立评测外均为厂商自报。</p>
+<h2>我们的判断</h2>
+<ul>
+<li>前沿已从“聊天模型”转向“Agent 模型 + 工具 API”：9–11 月几乎所有旗舰发布都以长程 Agent、编码、工具调用为卖点，上下文普遍 1M token。单纯“更会聊天”已不是差异点。</li>
+<li>价格两极分化：顶级旗舰涨价或维持高价（GPT-6 Astra $10/$50；Gemini 4 旗舰 12 月 1 日起翻倍至 $4/$20），够用档大幅降价（GPT-6 Sol/Luna 约为 GPT-5.6 半价、MiniMax M3.1 Flash 为 M3 一半、Kimi K3.1 Pro $2/$10 低于 K3）。策略是分层路由，不追旗舰。</li>
+<li>对我们最直接的利好是 DeepSeek 11 月 13 日的 API 扩展：搜索、读链接、文件解析、安全检查进聊天 API，另有独立 Search、Fetch、OCR、ASR、TTS 接口。但这些都额外收费，按“收费暂不考虑”的决定列为待批，等商用流量与收入起来再议。现有聊天已随 deepseek-flash 同价升级至 V4.1-Flash-1017，无需动作。</li>
+<li>小团队跑通的模式是“垂直 + 结果交付”，不是通用聊天壳：Stripe 验证数据显示窄工具（内容复用、AI 搜索可见性、垂直聊天机器人）仍在赚钱，通用 AI 包装收入下滑。</li>
+<li>合规已从建议变为执法案例：11 月 2 日网信通报中，小程序因未落实 AI 标识、未做安全评估被责令下线，API 中转站被查处。财经内容死守不荐股底线。</li>
+</ul>
+<h2>现有基础</h2>
+<ul>
+<li>AI 聊天：DeepSeek API 驱动，联网搜索 + 来源引用，免费开放。</li>
+<li>报税鸭：微信小程序 v1.0.0，¥9.9，只卖工具、不代办，数据只存用户手机本地。</li>
+<li>财经内容管线：每日早播报、雪球要点、投资备忘录。</li>
+<li>基础设施：新加坡轻量节点运行财经采集器、健康检查与每日备份；官网静态托管 + Cloudflare。</li>
+<li>免费资源库：101 条已核实的免费资源（见<a href="/ai/free/">免费资源</a>）。</li>
+</ul>
+<h2>近 60 天大事（精选）</h2>
+<ul>
+<li><strong>9 月 3 日</strong>：OpenAI 发布 GPT-6 Astra（$10/$50，1.05M 上下文）。【已发布可用】</li>
+<li><strong>9 月 10 日</strong>：DeepSeek 发布 V4.1 Flash（原生多模态视觉理解）。【已发布可用】</li>
+<li><strong>9 月 22 日</strong>：OpenAI 发布 GPT-6 Sol（$2/$10）与 Luna（$0.10/$0.50）；Anthropic 发布 Claude Opus 5.5（$4/$20）。【已发布可用】</li>
+<li><strong>9 月 24 日</strong>：OpenAI 关闭 Sora API，无后继宣布。【已停运】</li>
+<li><strong>9 月 28 日</strong>：OpenAI 撤回 GPT-6.1 Astra 发布计划（安全原因，已向媒体确认）。【已撤回】</li>
+<li><strong>10 月 9 日</strong>：阿里发布 Qwen-Image-2.1-Turbo 开源权重。【已发布可用】</li>
+<li><strong>10 月 12 日</strong>：Meta 发布 Muse Wonder / Wonder Full。【已发布可用】</li>
+<li><strong>10 月 15 日</strong>：Meta 发布 Muse Spark Open 开源权重；NVIDIA 发布 Nemotron 3.5。【已发布可用】</li>
+<li><strong>10 月 16 日</strong>：微软归档 AutoGen，不再维护。【已归档】</li>
+<li><strong>10 月 17 日</strong>：DeepSeek 发布 V4.1-Flash-1017（同价升级，MIT 权重），并开放 Search/Fetch API（$0.75/千次）。【已发布可用】</li>
+<li><strong>10 月 19 日</strong>：MiniMax 发布 M3.1 Flash（$0.15/$0.60，为 M3 一半）。【已发布可用】</li>
+<li><strong>10 月 23 日</strong>：Moonshot 发布 Kimi K3.1 Pro（API $2/$10）。【已发布可用】</li>
+<li><strong>10 月 29 日</strong>：Mistral 发布 Large 4 权重；Scale + Hugging Face 发布 FineART 机器人数据集。【已发布可用】</li>
+<li><strong>11 月 2 日</strong>：美团 LongCat-2.5 全面可用（API $0.30/$1.20 限时价）；网信通报 10 起执法案例，2 起涉 AI 标识与安全评估。【已发布可用】</li>
+<li><strong>11 月 4 日</strong>：Kimi K3.1 Pro 权重发布（1.56TB，自定义许可）。【已发布可用】</li>
+<li><strong>11 月 5 日</strong>：Hugging Face 发布 LeRobot v0.7.0；Gemini Omni 1.2 Flash 视频模型 GA（约 $0.07/秒）。【已发布可用】</li>
+<li><strong>11 月 9 日</strong>：Anthropic 发布 Claude Fable/Mythos 5.2（$8/$40）；Meta 发布 Muse Ember（$0.10/$0.50）；网信办备案系统上线。【已发布可用】</li>
+<li><strong>11 月 10 日</strong>：Gemini 4 Carbon 全面可用。【已发布可用】</li>
+<li><strong>11 月 11 日</strong>：阿里开放 Qwen4-Max Preview（11 月 25 日退役）与 Qwen Code 1.0 Preview；MCP 公布半年发布周期。【限时预览】</li>
+<li><strong>11 月 12 日</strong>：Google 发布 Gemini 4 Hydrogen（官方博客），成为 Search AI Mode 默认模型；Anthropic 新地区政策生效（中国大陆不受支持）。【已发布可用】</li>
+<li><strong>11 月 13 日</strong>：DeepSeek 将搜索、读链接、文件解析、安全检查开放给 API，另有独立 Search、Fetch、OCR、ASR、TTS 接口。【已发布可用】</li>
+</ul>
+<h2>我们能做的五件事</h2>
+<div class="deal"><h3>1. DeepSeek 新 API 升级现有工具<span class="badge">待批</span></h3>
+<p>搜索、读链接、文件解析、OCR、ASR、TTS 正好补齐财经管线的输入端（公告、研报、电话会）与输出端（播客、短视频旁白）。收费，暂不接；等商用流量与收入起来再议。现有聊天已随同价升级受益。</p></div>
+<div class="deal"><h3>2. 财经内容管线 Agent 化<span class="badge">下一步</span></h3>
+<p>LangGraph（需审批/断点）或 n8n（纯自动化）搭建“抓取 → 抽取 → 多模型交叉核对 → 人工核验 → 分发”管线；数字与引用必须回查原始披露，AI 只产出可验证的主张。用开源框架与现有模型余额，不新增付费。</p></div>
+<div class="deal"><h3>3. 低成本多模态内容包<span class="badge">先试免费档</span></h3>
+<p>Qwen Image/Seedream 做封面与信息图（单张 $0.02–0.03 级）、Kling/Hailuo 做短视频（约 $0.07–0.13/秒）、DeepSeek TTS 做播客。全部加 AI 标识；视频模型退役快，做双模型备份。</p></div>
+<div class="deal"><h3>4. 垂直 Agent 服务，卖结果不卖工具<span class="badge">2–3 个月验证</span></h3>
+<p>从财经 MCP 服务器 / 财报 Agent 起步（带引用的公告摘要与风险点清单），按报告或按月收费，先找 3–5 家种子客户验证。绝不输出个股买卖建议；公开售卖前完成备案/登记与标识。</p></div>
+<div class="deal"><h3>5. 免费优先 + 分层路由 + 合规基线<span class="badge">进行中</span></h3>
+<p>本地小开源模型处理敏感数据，生产用 DeepSeek Flash 主力 + Kimi/MiniMax 对照；每月复查定价页与退役公告，维护“模型—许可—备案状态”清单。</p></div>
+<h2>我们不做的事</h2>
+<ul>
+<li>不追未发布模型：GPT-7 无公告；Gemini 3.5 Pro 是否取消未证实；Qwen4 完整家族未发布。</li>
+<li>不买人形机器人、不承诺机器人交付：Optimus 对外交付约 2027 年底，预订报道未证实；唯一可动手的是 LeRobot 开源生态，适合做内容与服务。</li>
+<li>不做通用聊天壳，不转售海外旗舰 API：OpenAI、Anthropic、Google 条款禁止或限制转售，且中国大陆不在支持名单。</li>
+<li>不把生产流量押在 11 月底退役的模型与预览上：Claude Sonnet 4.5、MiniMax M2.x、Qwen4-Max Preview。</li>
+<li>不做“AI 荐股”类产品：证券投资咨询需证监会许可，AI 包装不改变定性。</li>
+<li>开源权重先看许可再看跑分：MIT/Apache-2.0 最干净；Kimi、MiniMax、Mistral Large 4 等自定义许可含 MaaS 限制，售卖前读原文。</li>
+</ul>
+<h2>未证实的事（不列入计划）</h2>
+<p>GPT-7：OpenAI 未宣布。Gemini 3.5 Pro 是否取消：Google 未证实也未否认。Optimus 12 月预订：报道未证实。LongCat-2.5 权重发布日：11 月 9 日与 10 日两种说法。MiniMax M3.1 Flash 独立指数分：43 与 29 两种口径。DeepSeek 1017 总参数：厂商称 552B 主干，第三方元数据口径 763B。</p>
+<h2>口径与来源</h2>
+<p>调研于 2026 年 11 月 16 日，基于公开网页，未做 API 实测。价格为厂商定价页当日快照，基准分除注明独立评测外均为厂商自报。关键决策前请重查厂商定价页与网信办公告。以下内容整理不构成法律意见。</p>
+<ul>
+<li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/">Google 官方博客：Gemini 4 Hydrogen（2026-11-12）</a></li>
+<li><a href="https://www.morphllm.com/deepseek-v4-1-flash">morphllm：DeepSeek V4.1 Flash</a></li>
+<li><a href="https://ainewsway.com/news/deepseek-opens-its-app-tools-to-api-users">ainewsway：DeepSeek 11 月 13 日 API 扩展</a></li>
+<li><a href="https://www.ailawa.cn/2026/11/04/cac-enforcement-cases-ai-compliance-lines-2026-11/">网信执法案例整理（2026-11-04）</a></li>
+<li><a href="https://superframeworks.com/articles/best-micro-saas-ideas-solopreneurs">Stripe 验证收入：小团队模式（TrustMRR）</a></li>
+<li><a href="https://huggingface.co/blog/lerobot/lerobot-release-v070">Hugging Face：LeRobot v0.7.0</a></li>
+<li><a href="https://gravity.fast/blog/open-source-ai-agent-frameworks/">开源 Agent 框架现状（2026-11-12 核查）</a></li>
+<li><a href="https://www.forasoft.com/blog/article/text-to-video-api-comparison">视频模型价格对比（2026-11-07 核验）</a></li>
+</ul>
+
+</div></main>
+<footer><div class="wrap">
+<p class="footlinks"><a href="/">首页</a><a href="/ai/">AI</a><a href="/invest/">投资</a><a href="/lab/">创业</a><a href="/about/">关于</a><a href="/chat/">AI 聊天</a></p>
+<p>© 2026 零擎智能 ZeroEngineAI</p>
+<p>本站内容仅供参考，不构成投资建议。优惠信息以商家官方页面为准，条款可能随时变更。</p>
+</div></footer>
+</body>
+</html>
