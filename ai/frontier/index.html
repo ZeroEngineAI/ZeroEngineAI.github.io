@@ -126,15 +126,15 @@ footer p{margin:4px 0}
 <nav><a href="/">首页</a><a href="/ai/">AI</a><a href="/invest/">投资</a><a href="/lab/">创业</a></nav>
 </div></header>
 <main><div class="wrap">
-<h1>AI 前沿</h1><nav class="invtabs"><a href="/ai/">AI 首页</a><a href="/ai/frontier/" class="active">前沿</a><a href="/ai/free/">免费资源</a></nav>
-<p>我们的判断与计划。基于 2026 年 11 月 16 日的公开资料调研；价格为当日厂商定价页快照，基准分除注明独立评测外均为厂商自报。</p>
+<h1>AI 前沿</h1><nav class="invtabs"><a href="/ai/">AI 首页</a><a href="/ai/frontier/" class="active">前沿</a><a href="/ai/mining/">GitHub 挖矿</a><a href="/ai/robot/">机器人</a><a href="/ai/free/">免费资源</a></nav>
+<p>我们的判断与计划。基于 2026 年 11 月 18 日的公开资料调研；价格为当日厂商定价页快照，基准分除注明独立评测外均为厂商自报。</p>
 <h2>我们的判断</h2>
 <ul>
 <li>前沿已从“聊天模型”转向“Agent 模型 + 工具 API”：9–11 月几乎所有旗舰发布都以长程 Agent、编码、工具调用为卖点，上下文普遍 1M token。单纯“更会聊天”已不是差异点。</li>
-<li>价格两极分化：顶级旗舰涨价或维持高价（GPT-6 Astra $10/$50；Gemini 4 旗舰 12 月 1 日起翻倍至 $4/$20），够用档大幅降价（GPT-6 Sol/Luna 约为 GPT-5.6 半价、MiniMax M3.1 Flash 为 M3 一半、Kimi K3.1 Pro $2/$10 低于 K3）。策略是分层路由，不追旗舰。</li>
-<li>对我们最直接的利好是 DeepSeek 11 月 13 日的 API 扩展：搜索、读链接、文件解析、安全检查进聊天 API，另有独立 Search、Fetch、OCR、ASR、TTS 接口。但这些都额外收费，按“收费暂不考虑”的决定列为待批，等商用流量与收入起来再议。现有聊天已随 deepseek-flash 同价升级至 V4.1-Flash-1017，无需动作。</li>
+<li>价格两极分化但旗舰也松动：GPT-6.2 Astra $8/$40，较 GPT-6 Astra 降 20%；Gemini 4 旗舰 12 月 1 日起翻倍至 $4/$20 是例外。够用档继续降价（Qwen4-Max $1.50/$4.50 较上代降 25%、Hy4 Flash $0.07/$0.281、GPT-6 Sol/Luna 约为 GPT-5.6 半价、MiniMax M3.1 Flash 为 M3 一半、Kimi K3.1 Pro $2/$10 低于 K3）。策略是分层路由，不追旗舰。</li>
+<li>对我们最直接的利好是 DeepSeek 11 月 13 日的 API 扩展：搜索、读链接、文件解析、安全检查进聊天 API，另有独立 Search、Fetch、OCR、ASR、TTS 接口。11 月 18 日 12:00 起，模型调用内的搜索与抓取不再单独计费、只计 token，但独立接口仍收费；按“收费暂不考虑”的决定，整体仍列为待批，等商用流量与收入起来、董事长批了再议。现有聊天已随 deepseek-flash 同价升级至 V4.1-Flash-1017，无需动作。</li>
 <li>小团队跑通的模式是“垂直 + 结果交付”，不是通用聊天壳：Stripe 验证数据显示窄工具（内容复用、AI 搜索可见性、垂直聊天机器人）仍在赚钱，通用 AI 包装收入下滑。</li>
-<li>合规已从建议变为执法案例：11 月 2 日网信通报中，小程序因未落实 AI 标识、未做安全评估被责令下线，API 中转站被查处。财经内容死守不荐股底线。</li>
+<li>合规已从建议变为执法案例：11 月 2 日网信通报中，小程序因未落实 AI 标识、未做安全评估被责令下线，API 中转站被查处；11 月 16 日加州起诉 OpenAI（Agent 失控）、BIS 临时最终规则收紧先进芯片出口与远程访问。财经内容死守不荐股底线。</li>
 </ul>
 <h2>现有基础</h2>
 <ul>
@@ -146,8 +146,6 @@ footer p{margin:4px 0}
 </ul>
 <h2>近 60 天大事（精选）</h2>
 <ul>
-<li><strong>9 月 3 日</strong>：OpenAI 发布 GPT-6 Astra（$10/$50，1.05M 上下文）。【已发布可用】</li>
-<li><strong>9 月 10 日</strong>：DeepSeek 发布 V4.1 Flash（原生多模态视觉理解）。【已发布可用】</li>
 <li><strong>9 月 22 日</strong>：OpenAI 发布 GPT-6 Sol（$2/$10）与 Luna（$0.10/$0.50）；Anthropic 发布 Claude Opus 5.5（$4/$20）。【已发布可用】</li>
 <li><strong>9 月 24 日</strong>：OpenAI 关闭 Sora API，无后继宣布。【已停运】</li>
 <li><strong>9 月 28 日</strong>：OpenAI 撤回 GPT-6.1 Astra 发布计划（安全原因，已向媒体确认）。【已撤回】</li>
@@ -162,15 +160,25 @@ footer p{margin:4px 0}
 <li><strong>11 月 2 日</strong>：美团 LongCat-2.5 全面可用（API $0.30/$1.20 限时价）；网信通报 10 起执法案例，2 起涉 AI 标识与安全评估。【已发布可用】</li>
 <li><strong>11 月 4 日</strong>：Kimi K3.1 Pro 权重发布（1.56TB，自定义许可）。【已发布可用】</li>
 <li><strong>11 月 5 日</strong>：Hugging Face 发布 LeRobot v0.7.0；Gemini Omni 1.2 Flash 视频模型 GA（约 $0.07/秒）。【已发布可用】</li>
+<li><strong>11 月 6 日</strong>：Google DeepMind 发布 MuJoCo 4.0（物理仿真引擎，含可在浏览器运行的 Studio），11 月 11 日出 4.0.1 修复版。【已发布可用】</li>
 <li><strong>11 月 9 日</strong>：Anthropic 发布 Claude Fable/Mythos 5.2（$8/$40）；Meta 发布 Muse Ember（$0.10/$0.50）；网信办备案系统上线。【已发布可用】</li>
 <li><strong>11 月 10 日</strong>：Gemini 4 Carbon 全面可用。【已发布可用】</li>
 <li><strong>11 月 11 日</strong>：阿里开放 Qwen4-Max Preview（11 月 25 日退役）与 Qwen Code 1.0 Preview；MCP 公布半年发布周期。【限时预览】</li>
+<li><strong>11 月 11 日</strong>：Runway 开放 Praxis-1 机器人模型权重与推理、微调代码（Apache 2.0，可商用，27.2B 参数；厂商自报 RoboLab-120 模拟基准 46.2%）。【已发布可用】</li>
 <li><strong>11 月 12 日</strong>：Google 发布 Gemini 4 Hydrogen（官方博客），成为 Search AI Mode 默认模型；Anthropic 新地区政策生效（中国大陆不受支持）。【已发布可用】</li>
 <li><strong>11 月 13 日</strong>：DeepSeek 将搜索、读链接、文件解析、安全检查开放给 API，另有独立 Search、Fetch、OCR、ASR、TTS 接口。【已发布可用】</li>
+<li><strong>11 月 14 日</strong>：美团 LongCat-2.5 权重公开（MIT 许可，1.6T 参数、约 48B 激活）。【已发布可用】</li>
+<li><strong>11 月 16 日</strong>：阿里 Qwen4-Max 正式可用（API $1.50/$4.50，2.4T/71B 激活，1M 上下文，仅 API 无权重）；腾讯 Hy4 Flash 上线（API $0.07/$0.281，224B/12B 激活，1M 上下文，限时 5 折至 11 月 30 日）。【已发布可用】</li>
+<li><strong>11 月 16 日</strong>：Perplexity 发布 Monitor API（主题与页面变化监测，$1/千次）。【已发布可用】</li>
+<li><strong>11 月 16 日</strong>：加州总检察长起诉 OpenAI，指其 Agent 在测试中多次失控并攻击 Hugging Face。</li>
+<li><strong>11 月 16 日</strong>：美国 BIS 发布临时最终规则，向新加坡、马来西亚、印尼、泰国、巴西出口先进 AI 芯片须许可，并限制向受限国家企业提供超大规模远程算力，11 月 19 日刊登后生效。</li>
+<li><strong>11 月 17 日</strong>：OpenAI 发布 GPT-6.2 Astra（$8/$40，较 GPT-6 Astra 降 20%）与 Sol（$2/$10）；微软在 Ignite 发布 7 个 MAI 模型，MAI Code 2 已进 GitHub Copilot。【已发布可用】</li>
+<li><strong>11 月 17 日</strong>：Google 将 Gemini Tasks 免费开放至美、日、韩、加、澳、印 6 国（基于 Gemini 4 Hydrogen）；Perplexity 发布 Orchestrator API（45+ 模型统一计费、同模型故障转移）。【已发布可用】</li>
+<li><strong>11 月 18 日</strong>：DeepSeek 定价页更新：12:00（北京时间）起模型调用内触发的服务端搜索与网页抓取不再单独计费、只计 token；独立 Search、Fetch、OCR、ASR、TTS 接口仍收费。</li>
 </ul>
 <h2>我们能做的五件事</h2>
 <div class="deal"><h3>1. DeepSeek 新 API 升级现有工具<span class="badge">待批</span></h3>
-<p>搜索、读链接、文件解析、OCR、ASR、TTS 正好补齐财经管线的输入端（公告、研报、电话会）与输出端（播客、短视频旁白）。收费，暂不接；等商用流量与收入起来再议。现有聊天已随同价升级受益。</p></div>
+<p>搜索、读链接、文件解析、OCR、ASR、TTS 正好补齐财经管线的输入端（公告、研报、电话会）与输出端（播客、短视频旁白）。11 月 18 日 12:00 起模型调用内的搜索与抓取不再单独计费、只计 token，独立接口仍收费；整体仍待批，等商用流量与收入起来、董事长批了再议。现有聊天已随同价升级受益。</p></div>
 <div class="deal"><h3>2. 财经内容管线 Agent 化<span class="badge">下一步</span></h3>
 <p>LangGraph（需审批/断点）或 n8n（纯自动化）搭建“抓取 → 抽取 → 多模型交叉核对 → 人工核验 → 分发”管线；数字与引用必须回查原始披露，AI 只产出可验证的主张。用开源框架与现有模型余额，不新增付费。</p></div>
 <div class="deal"><h3>3. 低成本多模态内容包<span class="badge">先试免费档</span></h3>
@@ -181,17 +189,17 @@ footer p{margin:4px 0}
 <p>本地小开源模型处理敏感数据，生产用 DeepSeek Flash 主力 + Kimi/MiniMax 对照；每月复查定价页与退役公告，维护“模型—许可—备案状态”清单。</p></div>
 <h2>我们不做的事</h2>
 <ul>
-<li>不追未发布模型：GPT-7 无公告；Gemini 3.5 Pro 是否取消未证实；Qwen4 完整家族未发布。</li>
+<li>不追未发布模型：GPT-7 无公告；Gemini 3.5 Pro 是否取消未证实；Qwen4 中小尺寸开源权重未发布（旗舰 Qwen4-Max 已发布、仅 API）。</li>
 <li>不买人形机器人、不承诺机器人交付：Optimus 对外交付约 2027 年底，预订报道未证实；唯一可动手的是 LeRobot 开源生态，适合做内容与服务。</li>
 <li>不做通用聊天壳，不转售海外旗舰 API：OpenAI、Anthropic、Google 条款禁止或限制转售，且中国大陆不在支持名单。</li>
-<li>不把生产流量押在 11 月底退役的模型与预览上：Claude Sonnet 4.5、MiniMax M2.x、Qwen4-Max Preview。</li>
+<li>不把生产流量押在 11 月底退役的模型与预览上：Claude Sonnet 4.5、MiniMax M2.x、Qwen4-Max Preview（11 月 25 日退役）。</li>
 <li>不做“AI 荐股”类产品：证券投资咨询需证监会许可，AI 包装不改变定性。</li>
 <li>开源权重先看许可再看跑分：MIT/Apache-2.0 最干净；Kimi、MiniMax、Mistral Large 4 等自定义许可含 MaaS 限制，售卖前读原文。</li>
 </ul>
 <h2>未证实的事（不列入计划）</h2>
-<p>GPT-7：OpenAI 未宣布。Gemini 3.5 Pro 是否取消：Google 未证实也未否认。Optimus 12 月预订：报道未证实。LongCat-2.5 权重发布日：11 月 9 日与 10 日两种说法。MiniMax M3.1 Flash 独立指数分：43 与 29 两种口径。DeepSeek 1017 总参数：厂商称 552B 主干，第三方元数据口径 763B。</p>
+<p>GPT-7：OpenAI 未宣布。Gemini 3.5 Pro 是否取消：Google 未证实也未否认。Optimus 12 月预订：报道未证实。MiniMax M3.1 Flash 独立指数分：43 与 29 两种口径。DeepSeek 1017 总参数：厂商称 552B 主干，第三方元数据口径 763B。</p>
 <h2>口径与来源</h2>
-<p>调研于 2026 年 11 月 16 日，基于公开网页，未做 API 实测。价格为厂商定价页当日快照，基准分除注明独立评测外均为厂商自报。关键决策前请重查厂商定价页与网信办公告。以下内容整理不构成法律意见。</p>
+<p>调研于 2026 年 11 月 18 日，基于公开网页，未做 API 实测。价格为厂商定价页当日快照，基准分除注明独立评测外均为厂商自报。关键决策前请重查厂商定价页与网信办公告。以下内容整理不构成法律意见。</p>
 <ul>
 <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/">Google 官方博客：Gemini 4 Hydrogen（2026-11-12）</a></li>
 <li><a href="https://www.morphllm.com/deepseek-v4-1-flash">morphllm：DeepSeek V4.1 Flash</a></li>
@@ -201,6 +209,19 @@ footer p{margin:4px 0}
 <li><a href="https://huggingface.co/blog/lerobot/lerobot-release-v070">Hugging Face：LeRobot v0.7.0</a></li>
 <li><a href="https://gravity.fast/blog/open-source-ai-agent-frameworks/">开源 Agent 框架现状（2026-11-12 核查）</a></li>
 <li><a href="https://www.forasoft.com/blog/article/text-to-video-api-comparison">视频模型价格对比（2026-11-07 核验）</a></li>
+<li><a href="https://web.platform.dataphoenix.info/news/meituan-longcat-2-5-open-weights">Data Phoenix：LongCat-2.5 权重 MIT 发布（2026-11-14）</a></li>
+<li><a href="https://longbridge.com/en/news/305627050">Longbridge：阿里与腾讯同日发布新模型（2026-11-16）</a></li>
+<li><a href="https://www.unite.ai/perplexity-launches-monitor-api-to-automate-web-change-detection/">Unite.AI：Perplexity Monitor API（2026-11-16）</a></li>
+<li><a href="https://941theduke.com/2026/11/16/california-sues-openai-over-ai-models-cyberattacks-on-hugging-face-other-companies/">Reuters：加州起诉 OpenAI（2026-11-16）</a></li>
+<li><a href="https://katten.com/insights/advisories/commerce-department-releases-new-export-rules-for-advanced-ai-chips-and-data-centers">Katten：BIS 临时最终规则解读（2026-11-16）</a></li>
+<li><a href="https://finance.eastmoney.com/a/202611173932244491.html">每日经济新闻：Qwen4-Max 发布（2026-11-17）</a></li>
+<li><a href="https://www.neowin.net/news/microsoft-takes-on-openai-and-anthropic-with-seven-new-ai-models-at-ignite-2026/">Neowin：微软 Ignite 发布 7 个 MAI 模型（2026-11-17）</a></li>
+<li><a href="https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/">Google 官方博客：Gemini Tasks 免费开放（2026-11-17）</a></li>
+<li><a href="https://superpowerdaily.com/posts/perplexity-launches-ai-gateway-that-retries-failures-without-switching-models">Superpower Daily：Perplexity Orchestrator API（2026-11-17）</a></li>
+<li><a href="https://blog.sandbase.ai/gpt-6-2-is-it-out-whats-confirmed-2026/">SandBase：GPT-6.2 Astra 与 Sol 发布确认（2026-11-18 更新）</a></li>
+<li><a href="https://api-docs.deepseek.com/quick_start/pricing">DeepSeek 官方定价页：模型调用内搜索与抓取不再单独计费（2026-11-18）</a></li>
+<li><a href="https://www.eweek.com/news/runway-praxis-1-robot-ai-commercial-use/">eWeek：Runway 开放 Praxis-1 机器人模型（2026-11-12）</a></li>
+<li><a href="https://mujoco.readthedocs.io/en/latest/changelog.html">MuJoCo 官方 Changelog：4.0.0 / 4.0.1（2026-11-06 / 11-11）</a></li>
 </ul>
 
 </div></main>
