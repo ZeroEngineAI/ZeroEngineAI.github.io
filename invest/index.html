@@ -62,7 +62,22 @@ hr{border:none;border-top:1px solid var(--line);margin:28px 0}
 .latest-title{margin:0 0 6px}
 .latest-title a{font-size:18px;font-weight:600}
 .latest-excerpt{font-size:15px;line-height:1.75;color:#4d5156;margin:0 0 8px}
-@media (max-width:600px){.hero{padding-top:44px}.hero-logo .logo-svg{width:252px}.bar{gap:8px;padding:12px 0}nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%}nav::-webkit-scrollbar{display:none}nav a{white-space:nowrap;padding:6px 8px}h1{font-size:24px}h2{font-size:19px}}
+.greet{font-size:20px;font-weight:600;margin:22px 0 0}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;max-width:640px;margin:16px auto 0}
+.chip{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:6px 14px;color:var(--ink);background:#fff}
+.chip:hover{border-color:#999;text-decoration:none}
+.feed{max-width:640px;margin:56px auto 0;text-align:left}
+.feed h2{font-size:15px;color:var(--muted);font-weight:600;border-bottom:none;margin:0 0 10px;padding-bottom:0}
+.feed h2 a{font-size:13px;font-weight:400;float:right}
+.feed ul{list-style:none;margin:0;padding:0}
+.feed li{padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.6}
+.feed .d{color:var(--muted);font-size:13px;margin-right:10px;white-space:nowrap}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:640px;margin:40px auto 0;text-align:left}
+.card{border:1px solid var(--line);border-radius:12px;padding:16px 18px;color:var(--ink);display:block}
+.card:hover{border-color:#999;text-decoration:none}
+.card strong{font-size:17px;display:block;margin-bottom:4px}
+.card span{font-size:14px;color:var(--muted);line-height:1.6}
+@media (max-width:600px){.hero{padding-top:44px}.hero-logo .logo-svg{width:252px}.bar{gap:8px;padding:12px 0}nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%}nav::-webkit-scrollbar{display:none}nav a{white-space:nowrap;padding:6px 8px}h1{font-size:24px}h2{font-size:19px}.cards{grid-template-columns:1fr}.greet{font-size:18px}}
 .deal{border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:14px 0}
 .deal h3{margin:0 0 4px}
 .deal .tags{font-size:13px;color:var(--muted);margin:2px 0 8px}
@@ -128,7 +143,7 @@ footer p{margin:4px 0}
 <main><div class="wrap">
 
 <h1>投资</h1>
-<nav class="invtabs"><a href="/invest/" class="active">市场行情</a><a href="/invest/xueqiu/">雪球要点</a><a href="/invest/memos/">投资备忘录</a><a href="/research/">研究</a></nav>
+<nav class="invtabs"><a href="/invest/" class="active">市场行情</a><a href="/invest/xueqiu/">雪球要点</a><a href="/invest/memos/">投资备忘录</a><a href="/research/">研究</a></nav><p class="quotes-note">最新雪球要点：<a href="/invest/xueqiu/2026-11-15/">雪球要点 · 2026-11-15</a>（2026-11-15）</p><p class="quotes-note">最新备忘录：<a href="/invest/memos/risk/">风险</a></p>
 <p class="quotes-note">投资理念：长期复利、财报周期裁决、因子纪律，详见<a href="/invest/memos/">投资备忘录</a>。</p>
 <div id="quotes" class="quotes"><p class="quotes-loading">行情加载中…</p></div>
 <p class="quotes-note" id="quotes-note"></p>

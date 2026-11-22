@@ -62,7 +62,22 @@ hr{border:none;border-top:1px solid var(--line);margin:28px 0}
 .latest-title{margin:0 0 6px}
 .latest-title a{font-size:18px;font-weight:600}
 .latest-excerpt{font-size:15px;line-height:1.75;color:#4d5156;margin:0 0 8px}
-@media (max-width:600px){.hero{padding-top:44px}.hero-logo .logo-svg{width:252px}.bar{gap:8px;padding:12px 0}nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%}nav::-webkit-scrollbar{display:none}nav a{white-space:nowrap;padding:6px 8px}h1{font-size:24px}h2{font-size:19px}}
+.greet{font-size:20px;font-weight:600;margin:22px 0 0}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;max-width:640px;margin:16px auto 0}
+.chip{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:6px 14px;color:var(--ink);background:#fff}
+.chip:hover{border-color:#999;text-decoration:none}
+.feed{max-width:640px;margin:56px auto 0;text-align:left}
+.feed h2{font-size:15px;color:var(--muted);font-weight:600;border-bottom:none;margin:0 0 10px;padding-bottom:0}
+.feed h2 a{font-size:13px;font-weight:400;float:right}
+.feed ul{list-style:none;margin:0;padding:0}
+.feed li{padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.6}
+.feed .d{color:var(--muted);font-size:13px;margin-right:10px;white-space:nowrap}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:640px;margin:40px auto 0;text-align:left}
+.card{border:1px solid var(--line);border-radius:12px;padding:16px 18px;color:var(--ink);display:block}
+.card:hover{border-color:#999;text-decoration:none}
+.card strong{font-size:17px;display:block;margin-bottom:4px}
+.card span{font-size:14px;color:var(--muted);line-height:1.6}
+@media (max-width:600px){.hero{padding-top:44px}.hero-logo .logo-svg{width:252px}.bar{gap:8px;padding:12px 0}nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%}nav::-webkit-scrollbar{display:none}nav a{white-space:nowrap;padding:6px 8px}h1{font-size:24px}h2{font-size:19px}.cards{grid-template-columns:1fr}.greet{font-size:18px}}
 .deal{border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:14px 0}
 .deal h3{margin:0 0 4px}
 .deal .tags{font-size:13px;color:var(--muted);margin:2px 0 8px}
@@ -126,7 +141,7 @@ footer p{margin:4px 0}
 <nav><a href="/">首页</a><a href="/ai/" class="active">AI</a><a href="/invest/">投资</a><a href="/lab/">创业</a></nav>
 </div></header>
 <main><div class="wrap">
-<h1>更新日志</h1><ul class="archivelist"><li><span class="d">2026-11-22</span>AI 前沿页更新：时间线滚动至 11 月 22 日，新增 11 月 14–21 日条目（黎曼猜想未证实、Anthropic 上市与 AI 股大跌、英伟达 SEC 调查、Hy4 与 Inkling 2 Mini 开源、Gemini 4 Neon、Genie 4、Jalapeño 芯片设计、Rubin HPC、GPT-6.2 Astra 具身实测、Linger、芯片出口许可、agent-framework 投毒、CRSI/SIM、Aion Instruct 与 Gemini for Mac）。</li><li><span class="d">2026-11-20</span>AI 前沿页更新：OpenAI 新版使用政策 11 月 20 日生效，时间线新增 11 月 20 日条目。</li><li><span class="d">2026-11-19</span>AI 前沿页更新：BIS 临时最终规则刊登《联邦公报》生效（91 FR 74970），时间线新增 11 月 19 日条目。</li><li><span class="d">2026-11-18</span>页脚新增“更新日志”入口。</li><li><span class="d">2026-11-18</span>机器人页上线：AI+robot 动态、做法与不做清单，归入 AI 板块。</li><li><span class="d">2026-11-18</span>GitHub 挖矿页上线：首批 13 个项目，8 个接、5 个不接，附 stars 与 license 快照。</li><li><span class="d">2026-11-18</span>AI 前沿页更新：时间线滚动至 11 月 18 日，新增机器人动态与 DeepSeek 计费变化。</li><li><span class="d">2026-11-16</span>宠物项目页上线：小商和小夏猫咪毛发养护项目进展。</li><li><span class="d">2026-11-16</span>AI 前沿页上线：判断、近 60 天大事、五件事、不做清单与未证实清单。</li><li><span class="d">2026-11-15</span>补上雪球要点与早播报归档页。</li><li><span class="d">2026-11-14</span>官网聊天改接 DeepSeek API，故障时自动降级回备用模型；智能搜索默认开启；超时保护上线。</li><li><span class="d">2026-11-14</span>聊天界面优化：正文列加宽，搜索完成后自动打开来源面板。</li><li><span class="d">2026-11-14</span>聊天上线联网搜索与来源引用；官网 zeroengineai.com 上线，AI 聊天免费开放。</li><li><span class="d">2026-11-10</span>报税鸭 v1.0.0 上线，售价 ¥9.9。</li></ul><p><a href="/ai/">← AI 产品</a></p>
+<h1>更新日志</h1><ul class="archivelist"><li><span class="d">2026-11-22</span>首页改版：AI 对话框优先（问候语 + 提问框 + 快捷提问），首页与 AI/投资/创业页新增“最新动态”，三方向卡片入口；更新频率：前沿页每日、免费资源每周抽查、挖矿每月一批、机器人页每月新增。</li><li><span class="d">2026-11-22</span>AI 前沿页更新：时间线滚动至 11 月 22 日，新增 11 月 14–21 日条目（黎曼猜想未证实、Anthropic 上市与 AI 股大跌、英伟达 SEC 调查、Hy4 与 Inkling 2 Mini 开源、Gemini 4 Neon、Genie 4、Jalapeño 芯片设计、Rubin HPC、GPT-6.2 Astra 具身实测、Linger、芯片出口许可、agent-framework 投毒、CRSI/SIM、Aion Instruct 与 Gemini for Mac）。</li><li><span class="d">2026-11-20</span>AI 前沿页更新：OpenAI 新版使用政策 11 月 20 日生效，时间线新增 11 月 20 日条目。</li><li><span class="d">2026-11-19</span>AI 前沿页更新：BIS 临时最终规则刊登《联邦公报》生效（91 FR 74970），时间线新增 11 月 19 日条目。</li><li><span class="d">2026-11-18</span>页脚新增“更新日志”入口。</li><li><span class="d">2026-11-18</span>机器人页上线：AI+robot 动态、做法与不做清单，归入 AI 板块。</li><li><span class="d">2026-11-18</span>GitHub 挖矿页上线：首批 13 个项目，8 个接、5 个不接，附 stars 与 license 快照。</li><li><span class="d">2026-11-18</span>AI 前沿页更新：时间线滚动至 11 月 18 日，新增机器人动态与 DeepSeek 计费变化。</li><li><span class="d">2026-11-16</span>宠物项目页上线：小商和小夏猫咪毛发养护项目进展。</li><li><span class="d">2026-11-16</span>AI 前沿页上线：判断、近 60 天大事、五件事、不做清单与未证实清单。</li><li><span class="d">2026-11-15</span>补上雪球要点与早播报归档页。</li><li><span class="d">2026-11-14</span>官网聊天改接 DeepSeek API，故障时自动降级回备用模型；智能搜索默认开启；超时保护上线。</li><li><span class="d">2026-11-14</span>聊天界面优化：正文列加宽，搜索完成后自动打开来源面板。</li><li><span class="d">2026-11-14</span>聊天上线联网搜索与来源引用；官网 zeroengineai.com 上线，AI 聊天免费开放。</li><li><span class="d">2026-11-10</span>报税鸭 v1.0.0 上线，售价 ¥9.9。</li></ul><p><a href="/ai/">← AI 产品</a></p>
 </div></main>
 <footer><div class="wrap">
 <p class="footlinks"><a href="/">首页</a><a href="/ai/">AI</a><a href="/invest/">投资</a><a href="/lab/">创业</a><a href="/about/">关于</a><a href="/ai/changelog/">更新日志</a><a href="/chat/">AI 聊天</a></p>

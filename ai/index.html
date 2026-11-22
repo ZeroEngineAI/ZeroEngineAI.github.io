@@ -62,7 +62,22 @@ hr{border:none;border-top:1px solid var(--line);margin:28px 0}
 .latest-title{margin:0 0 6px}
 .latest-title a{font-size:18px;font-weight:600}
 .latest-excerpt{font-size:15px;line-height:1.75;color:#4d5156;margin:0 0 8px}
-@media (max-width:600px){.hero{padding-top:44px}.hero-logo .logo-svg{width:252px}.bar{gap:8px;padding:12px 0}nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%}nav::-webkit-scrollbar{display:none}nav a{white-space:nowrap;padding:6px 8px}h1{font-size:24px}h2{font-size:19px}}
+.greet{font-size:20px;font-weight:600;margin:22px 0 0}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;max-width:640px;margin:16px auto 0}
+.chip{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:6px 14px;color:var(--ink);background:#fff}
+.chip:hover{border-color:#999;text-decoration:none}
+.feed{max-width:640px;margin:56px auto 0;text-align:left}
+.feed h2{font-size:15px;color:var(--muted);font-weight:600;border-bottom:none;margin:0 0 10px;padding-bottom:0}
+.feed h2 a{font-size:13px;font-weight:400;float:right}
+.feed ul{list-style:none;margin:0;padding:0}
+.feed li{padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.6}
+.feed .d{color:var(--muted);font-size:13px;margin-right:10px;white-space:nowrap}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:640px;margin:40px auto 0;text-align:left}
+.card{border:1px solid var(--line);border-radius:12px;padding:16px 18px;color:var(--ink);display:block}
+.card:hover{border-color:#999;text-decoration:none}
+.card strong{font-size:17px;display:block;margin-bottom:4px}
+.card span{font-size:14px;color:var(--muted);line-height:1.6}
+@media (max-width:600px){.hero{padding-top:44px}.hero-logo .logo-svg{width:252px}.bar{gap:8px;padding:12px 0}nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%}nav::-webkit-scrollbar{display:none}nav a{white-space:nowrap;padding:6px 8px}h1{font-size:24px}h2{font-size:19px}.cards{grid-template-columns:1fr}.greet{font-size:18px}}
 .deal{border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:14px 0}
 .deal h3{margin:0 0 4px}
 .deal .tags{font-size:13px;color:var(--muted);margin:2px 0 8px}
@@ -126,7 +141,7 @@ footer p{margin:4px 0}
 <nav><a href="/">首页</a><a href="/ai/" class="active">AI</a><a href="/invest/">投资</a><a href="/lab/">创业</a></nav>
 </div></header>
 <main><div class="wrap">
-<h1>AI</h1><nav class="invtabs"><a href="/ai/" class="active">AI 首页</a><a href="/ai/frontier/">前沿</a><a href="/ai/mining/">GitHub 挖矿</a><a href="/ai/robot/">机器人</a><a href="/ai/free/">免费资源</a></nav>
+<h1>AI</h1><nav class="invtabs"><a href="/ai/" class="active">AI 首页</a><a href="/ai/frontier/">前沿</a><a href="/ai/mining/">GitHub 挖矿</a><a href="/ai/robot/">机器人</a><a href="/ai/free/">免费资源</a></nav><h2>最新动态</h2><ul class="archivelist"><li><span class="d">11 月 21 日</span><a href="/ai/frontier/">DeepSeek V1 作者张博（Tony Zhang）开源本地个人 Agent Linger（11 月 10 日首发，近日出圈…</a></li><li><span class="d">11 月 20 日</span><a href="/ai/frontier/">XDOF 公布 GPT-6.2 Astra 在 Ember-0 具身基准的实测：16 项任务平均成功率 19.6% 升至 41.…</a></li><li><span class="d">11 月 20 日</span><a href="/ai/frontier/">OpenAI 将 GPT-Live-1.1 接入 API：全双工语音模型，v1/live/sessions，$0.05/分钟（活…</a></li><li><span class="d">11 月 20 日</span><a href="/ai/frontier/">Thinking Machines 发布 Inkling 2 Mini：26.4B 参数循环 MoE（3.4B 激活，循环后等效…</a></li><li><span class="d">11 月 20 日</span><a href="/ai/frontier/">腾讯发布混元 Hy4 正式版开源权重：770B 总参数/49B 激活 MoE，1M 上下文（1,048,576），含 Hy4、H…</a></li></ul><p><a href="/ai/frontier/">更多前沿动态 →</a></p>
 <h2>产品</h2>
 <div class="deal"><h3><a href="/ai/chat/">AI 聊天</a></h3>
 <p>本站内置的 AI 聊天助手：联网搜索、来源引用，免费开放。<a href="/chat/">打开 AI 聊天 →</a></p></div>
