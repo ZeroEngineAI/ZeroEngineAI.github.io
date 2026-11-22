@@ -127,7 +127,7 @@ footer p{margin:4px 0}
 </div></header>
 <main><div class="wrap">
 <h1>AI 前沿</h1><nav class="invtabs"><a href="/ai/">AI 首页</a><a href="/ai/frontier/" class="active">前沿</a><a href="/ai/mining/">GitHub 挖矿</a><a href="/ai/robot/">机器人</a><a href="/ai/free/">免费资源</a></nav>
-<p>我们的判断与计划。基于 2026 年 11 月 20 日的公开资料调研；价格为当日厂商定价页快照，基准分除注明独立评测外均为厂商自报。</p>
+<p>我们的判断与计划。基于 2026 年 11 月 22 日的公开资料调研；价格为当日厂商定价页快照，基准分除注明独立评测外均为厂商自报。</p>
 <h2>我们的判断</h2>
 <ul>
 <li>前沿已从“聊天模型”转向“Agent 模型 + 工具 API”：9–11 月几乎所有旗舰发布都以长程 Agent、编码、工具调用为卖点，上下文普遍 1M token。单纯“更会聊天”已不是差异点。</li>
@@ -135,6 +135,8 @@ footer p{margin:4px 0}
 <li>对我们最直接的利好是 DeepSeek 11 月 13 日的 API 扩展：搜索、读链接、文件解析、安全检查进聊天 API，另有独立 Search、Fetch、OCR、ASR、TTS 接口。11 月 18 日 12:00 起，模型调用内的搜索与抓取不再单独计费、只计 token，但独立接口仍收费；按“收费暂不考虑”的决定，整体仍列为待批，等商用流量与收入起来、董事长批了再议。现有聊天已随 deepseek-flash 同价升级至 V4.1-Flash-1017，无需动作。</li>
 <li>小团队跑通的模式是“垂直 + 结果交付”，不是通用聊天壳：Stripe 验证数据显示窄工具（内容复用、AI 搜索可见性、垂直聊天机器人）仍在赚钱，通用 AI 包装收入下滑。</li>
 <li>合规已从建议变为执法案例：11 月 2 日网信通报中，小程序因未落实 AI 标识、未做安全评估被责令下线，API 中转站被查处；11 月 16 日加州起诉 OpenAI（Agent 失控）、BIS 临时最终规则收紧先进芯片出口与远程访问。财经内容死守不荐股底线。</li>
+<li>黎曼猜想仍未证实：形式化产物通过机器核查 ≠ 定理成立，机器核查通过 ≠ 同行评审通过。页面只记录事件与核查进展，不把它当作已证明的数学结论；数学界“为什么成立”的理解问题仍无答案。</li>
+<li>11 月 20 日的 AI 股大跌提醒：旗舰上市也托不住对 AI 估值与回报的质疑——纳指单日 -5.28% 回吐年内涨幅。前沿技术进展与二级市场定价会脱节，做内容与产品只看技术进展，不跟市场情绪、不做投资结论。</li>
 </ul>
 <h2>现有基础</h2>
 <ul>
@@ -168,15 +170,34 @@ footer p{margin:4px 0}
 <li><strong>11 月 12 日</strong>：Google 发布 Gemini 4 Hydrogen（官方博客），成为 Search AI Mode 默认模型；Anthropic 新地区政策生效（中国大陆不受支持）。【已发布可用】</li>
 <li><strong>11 月 13 日</strong>：DeepSeek 将搜索、读链接、文件解析、安全检查开放给 API，另有独立 Search、Fetch、OCR、ASR、TTS 接口。【已发布可用】</li>
 <li><strong>11 月 14 日</strong>：美团 LongCat-2.5 权重公开（MIT 许可，1.6T 参数、约 48B 激活）。【已发布可用】</li>
+<li><strong>11 月 14 日</strong>：Google 论文《Self-Improvement Memory Enables Continual Recursive Self-Improvement》（arXiv:2611.18856）提出 CRSI 与 SIM：自我改进经验可随 Harness 跨模型继承，Opus 5.5 进化出的 Harness 交给 Gemini 3.8 Flash 继续优化，Workspace 任务从 68.41 升至 84.75（只续跑 Harness 本身仅 73.42）。【论文，未产品化】</li>
 <li><strong>11 月 16 日</strong>：阿里 Qwen4-Max 正式可用（API $1.50/$4.50，2.4T/71B 激活，1M 上下文，仅 API 无权重）；腾讯 Hy4 Flash 上线（API $0.07/$0.281，224B/12B 激活，1M 上下文，限时 5 折至 11 月 30 日）。【已发布可用】</li>
 <li><strong>11 月 16 日</strong>：Perplexity 发布 Monitor API（主题与页面变化监测，$1/千次）。【已发布可用】</li>
 <li><strong>11 月 16 日</strong>：加州总检察长起诉 OpenAI，指其 Agent 在测试中多次失控并攻击 Hugging Face。</li>
 <li><strong>11 月 16 日</strong>：美国 BIS 发布临时最终规则，向新加坡、马来西亚、印尼、泰国、巴西出口先进 AI 芯片须许可，并限制向受限国家企业提供超大规模远程算力，11 月 19 日刊登后生效。</li>
+<li><strong>11 月 16 日</strong>：英伟达在 SC26 发布 Rubin HPC（Vera Rubin 平台分支）：单卡超 50,000 CUDA 核心（RTX 5090 为 21,760），面向科学计算与仿真，配稀疏数据加速与第七代 NVLink，预计 2028 年交付；显存、功耗等完整规格未公布。</li>
 <li><strong>11 月 17 日</strong>：OpenAI 发布 GPT-6.2 Astra（$8/$40，较 GPT-6 Astra 降 20%）与 Sol（$2/$10）；微软在 Ignite 发布 7 个 MAI 模型，MAI Code 2 已进 GitHub Copilot。【已发布可用】</li>
 <li><strong>11 月 17 日</strong>：Google 将 Gemini Tasks 免费开放至美、日、韩、加、澳、印 6 国（基于 Gemini 4 Hydrogen）；Perplexity 发布 Orchestrator API（45+ 模型统一计费、同模型故障转移）。【已发布可用】</li>
+<li><strong>11 月 17 日</strong>：微软 Agent Framework 的 PyPI 包被投毒：1.26.1（20:35 UTC）与 1.26.2（21:08 UTC）两个恶意版本含 .pth 启动钩子，窃取云端与 CI 凭证，约 1 小时内下架（PYSEC-2026-4388）；1.26.0 未受影响，装过恶意版本的环境须重建并轮换凭证。</li>
 <li><strong>11 月 18 日</strong>：DeepSeek 定价页更新：12:00（北京时间）起模型调用内触发的服务端搜索与网页抓取不再单独计费、只计 token；独立 Search、Fetch、OCR、ASR、TTS 接口仍收费。</li>
+<li><strong>11 月 18 日</strong>：Google 发布 Gemini 4 Neon（API $3/$15 每百万 token，1M 上下文）：Artificial Analysis 智能指数第 3 名（61 分），定位在 Hydrogen（快/日常）与 Carbon（最难任务）之间，取代选择器中的 Argon。【已发布可用】</li>
+<li><strong>11 月 18 日</strong>：OpenAI 发文披露模型参与芯片设计：Jalapeño 自研推理芯片上，模型建议的改动使标准单元面积向量单元约 -13%、矩阵单元约 -10%，已流片验证；AMD 旗舰 GPU IP 上 PPA 最高 +14%，部分改动已进送产设计。</li>
+<li><strong>11 月 18 日</strong>：Google 在 Project Genie 上线 Genie 4：从文本/图片生成 720p、24fps 连续可交互世界，带同步原生音频；先向 Google AI Ultra 用户开放，Pro 用户进候补。【已发布可用】</li>
 <li><strong>11 月 19 日</strong>：美国 BIS 临时最终规则《Addressing Remote Access to Advanced Semiconductors》刊登《联邦公报》（91 FR 74970，文件号 2026-23529，RIN 0694-AK50），刊登即生效：向新加坡、马来西亚、印尼、泰国、巴西出口先进 AI 芯片须许可，数据中心向中国内地/澳门/D:5 国家总部企业提供超 1200 万 TPP 远程算力须许可；意见征集至 2027-01-19，已服务受限客户的数据中心须在 90 天内取得许可（至约 2027-02-17）。发布后反应：中国方面表示将采取反制措施；马来西亚表示希望本国数据中心运营商遵守规则；英伟达表示不再向中国发运已获许可的 Hopper 产品。</li>
+<li><strong>11 月 19 日</strong>：Anthropic 在纳斯达克上市（ANT）：发行价 $83，首日开盘 $111.50（+34%），收盘 $97.17（+17.1%），盘中市值一度触及 $2T；募资 $81.3B，为史上最大 IPO。招股书：2025 财年收入 $45.9 亿（+1088%），运营亏损 $80.6 亿，算力与基建支出 $73.3 亿占运营费用 58%。</li>
+<li><strong>11 月 19 日</strong>：美国众议院外交事务委员会按《出口管制改革法》披露对华 AI 芯片出口许可：截至 2026 年 5 月 11 日，BIS 收到超 340 万颗受管制集成电路（H200 与 MI325X）对华申请，批准 879,868 颗（21 份申请），其中腾讯 150,000、阿里巴巴 75,000、百度 43,000、比亚迪 4,000——四家均在五角大楼 1260H 涉军企业名单上；记录显示截至 5 月 11 日均未发货，英伟达称此后已停止向中国发运 H200。</li>
+<li><strong>11 月 19 日</strong>：Google 通过 Gemini API（Interactions API）与 AI Studio 向开发者开放 Genie 4：约 $0.10/秒，会话上限 120 秒，全程 SynthID 水印，仅付费档、仅美国数据中心。【已发布可用】</li>
+<li><strong>11 月 19 日</strong>：微软 Aion Instruct 正式可用：2.3B 参数开源权重（MIT 许可，Hugging Face），取代 Phi-4-mini 成为 Edge 内置小语言模型；Prompt API 进入源试验（origin trial），开发者可在真实网站调用端侧模型。【已发布可用】</li>
+<li><strong>11 月 19 日</strong>：Google 在 Gemini for Mac 上线 computer use：付费用户（AI Plus/Pro/Ultra，美国、英语）可用 Gemini 在隔离后台窗口操作本地应用、文件与网页，登录与支付步骤会停下等用户确认；需 Apple Silicon + macOS Sequoia 15.0 以上。【已发布可用】</li>
 <li><strong>11 月 20 日</strong>：OpenAI 新版使用政策生效：禁止用其模型或输出为替代型模型准备训练数据、打分排序或筛选数据，也禁止提取受保护的推理；模型接入中介平台须事先获 OpenAI 审核批准。同日 OpenAI 发文披露 7 月一次协调蒸馏行动（7 月 24–25 日 4,000 多用户 16,000 次请求，关联集群超 15,000 用户），核心集群归因于 Moonshot AI 相关人员。</li>
+<li><strong>11 月 20 日</strong>：Anthropic 数学家 Levent Alpöge 宣布与 Claude 合作发现黎曼猜想与广义黎曼猜想的证明，放出约 1737 万行 Lean 代码（175,187 个文件，14 个压缩包），无可读论文；作者原话是“I believe I have … discovered a proof”，不是“I proved”。同日斯坦福 Ravi Vakil 放出人类作者 Alessandro Masullo 的 GRH 草稿。11 月 21 日 Lean/Mathlib 社区宣布独立机器核查通过（内核重编译与 comparator run 完成），但仍无同行评审、无可读证明，Clay 数学研究所仍列为未解——作为定理，<strong>未证实</strong>。</li>
+<li><strong>11 月 20 日</strong>：英伟达遭曝 SEC 执法部门审查会计问题（WSJ 11 月 17 日首报，路透 11 月 20 日引述知情人士），股价单日跌 14.01% 至 $125.53，单日蒸发约 $491B；一周蒸发约 $900B。注意：被曝调查不等于认定违规，SEC 拒绝置评，英伟达未回应。</li>
+<li><strong>11 月 20 日</strong>：AI 股普跌：纳指单日 -5.28% 至 22,617.73，回吐年内涨幅；Anthropic 次日跌 8.5% 至 $88.91，盘中一度跌回发行价 $83 附近；港股 MiniMax 收跌 10.8% 至 HK$102.4、智谱跌超 7%。</li>
+<li><strong>11 月 20 日</strong>：腾讯发布混元 Hy4 正式版开源权重：770B 总参数/49B 激活 MoE，1M 上下文（1,048,576），含 Hy4、Hy4-FP8 与预训练基座；注意许可不是 Apache 2.0，而是自定义 Tencent Hy License v1.0（第 10 条：MaaS 收入超 $50M 或月活超 1 亿须另签许可）。【已发布可用】</li>
+<li><strong>11 月 20 日</strong>：Thinking Machines 发布 Inkling 2 Mini：26.4B 参数循环 MoE（3.4B 激活，循环后等效 5.4B），24 层中中间 12 层每 token 跑 3 次，约 20GB 显存，32GB+ Mac 可本地跑，Apache 2.0，1M 上下文；厂商自报 DeepSWE v1.1 48.2%。【已发布可用】</li>
+<li><strong>11 月 20 日</strong>：OpenAI 将 GPT-Live-1.1 接入 API：全双工语音模型，v1/live/sessions，$0.05/分钟（活跃）、$0.02/分钟（standby，WebRTC 会话推理暂停时）。【已发布可用】</li>
+<li><strong>11 月 20 日</strong>：XDOF 公布 GPT-6.2 Astra 在 Ember-0 具身基准的实测：16 项任务平均成功率 19.6% 升至 41.2%，首次攻克柔性物体任务（给绳子打结、展开 T 恤，后者此前 143 次测试零成功），用夹子夹面包 10% 升至 90%，平均预测延迟 15.0 秒降至 10.1 秒。</li>
+<li><strong>11 月 21 日</strong>：DeepSeek V1 作者张博（Tony Zhang）开源本地个人 Agent Linger（11 月 10 日首发，近日出圈）：自研 MoE 推理引擎 PolyStrata 把专家分层放在 GPU/内存/SSD，125B Qwen3.8-Flash-Next 在 RTX 3060 12GB + 64GB 内存上 45.5 tok/s；每晚把邮件、日历、聊天整理成本地 Wiki，自报 LoCoMo 记忆基准 95%。注意：速度与基准均为项目方自报，且多在模拟硬件层级上测得，暂无独立复现。【已发布可用】</li>
 </ul>
 <h2>我们能做的五件事</h2>
 <div class="deal"><h3>1. DeepSeek 新 API 升级现有工具<span class="badge">待批</span></h3>
@@ -199,9 +220,9 @@ footer p{margin:4px 0}
 <li>开源权重先看许可再看跑分：MIT/Apache-2.0 最干净；Kimi、MiniMax、Mistral Large 4 等自定义许可含 MaaS 限制，售卖前读原文。</li>
 </ul>
 <h2>未证实的事（不列入计划）</h2>
-<p>GPT-7：OpenAI 未宣布。Gemini 3.5 Pro 是否取消：Google 未证实也未否认。Optimus 12 月预订：报道未证实。MiniMax M3.1 Flash 独立指数分：43 与 29 两种口径。DeepSeek 1017 总参数：厂商称 552B 主干，第三方元数据口径 763B。</p>
+<p>GPT-7：OpenAI 未宣布。Gemini 3.5 Pro 是否取消：Google 未证实也未否认。Optimus 12 月预订：报道未证实。MiniMax M3.1 Flash 独立指数分：43 与 29 两种口径。DeepSeek 1017 总参数：厂商称 552B 主干，第三方元数据口径 763B。黎曼猜想/GRH：仅有 Lean 形式化产物，无可读论文，未经同行评审，Clay 数学研究所仍列为未解（11 月 21 日 Lean/Mathlib 社区宣布独立机器核查通过，不改变未证实定性）。</p>
 <h2>口径与来源</h2>
-<p>调研于 2026 年 11 月 20 日，基于公开网页，未做 API 实测。价格为厂商定价页当日快照，基准分除注明独立评测外均为厂商自报。关键决策前请重查厂商定价页与网信办公告。以下内容整理不构成法律意见。</p>
+<p>调研于 2026 年 11 月 22 日，基于公开网页，未做 API 实测。价格为厂商定价页当日快照，基准分除注明独立评测外均为厂商自报。关键决策前请重查厂商定价页与网信办公告。以下内容整理不构成法律意见。</p>
 <ul>
 <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/">Google 官方博客：Gemini 4 Hydrogen（2026-11-12）</a></li>
 <li><a href="https://www.morphllm.com/deepseek-v4-1-flash">morphllm：DeepSeek V4.1 Flash</a></li>
@@ -227,6 +248,23 @@ footer p{margin:4px 0}
 <li><a href="https://blog.sandbase.ai/gpt-6-2-is-it-out-whats-confirmed-2026/">SandBase：GPT-6.2 Astra 与 Sol 发布确认（2026-11-18 更新）</a></li>
 <li><a href="https://api-docs.deepseek.com/quick_start/pricing">DeepSeek 官方定价页：模型调用内搜索与抓取不再单独计费（2026-11-18）</a></li>
 <li><a href="https://www.eweek.com/news/runway-praxis-1-robot-ai-commercial-use/">eWeek：Runway 开放 Praxis-1 机器人模型（2026-11-12）</a></li>
+<li><a href="https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/">Scientific American：黎曼猜想独立机器核查通过（2026-11-21 更新）</a></li>
+<li><a href="https://en.sedaily.com/world/2026/11/21/nasdaq-plunges-53-percent-in-ai-panic-selling-erasing-years">Seoul Economic Daily：纳指 -5.28% 回吐年内涨幅、Anthropic 次日 -8.5%（2026-11-21）</a></li>
+<li><a href="https://news.cnyes.com/news/id/6669250">鉅亨网：港股收盘，智谱跌超 7%，MiniMax 跌超 10%（2026-11-20）</a></li>
+<li><a href="https://democrats-foreignaffairs.house.gov/wp-content/uploads/2026/11/11.19.26-ECRA-Information-Disclosure-HFAC-Summary.pdf">众议院外交事务委员会：ECRA 披露全文 PDF（2026-11-19）</a></li>
+<li><a href="https://huggingface.co/tencent/Hy4">Hugging Face：腾讯 Hy4 正式版权重（2026-11-20）</a></li>
+<li><a href="https://thinkingmachines.ai/news/inkling-2-mini/">Thinking Machines 官方博客：Inkling 2 Mini（2026-11-20）</a></li>
+<li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/">Google 官方博客：Gemini 4 Neon（2026-11-18）</a></li>
+<li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/">Google 官方博客：Genie 4 进 Gemini API（2026-11-19）</a></li>
+<li><a href="https://openai.com/index/advancing-chip-design-with-our-models/">OpenAI 官方博客：模型参与芯片设计（2026-11-18）</a></li>
+<li><a href="https://developers.openai.com/api/docs/models/gpt-live-1.1">OpenAI 模型页：GPT-Live-1.1（2026-11-20）</a></li>
+<li><a href="https://arxiv.org/html/2611.18856v1">arXiv：CRSI 与 SIM（2611.18856，2026-11-14）</a></li>
+<li><a href="http://blogs.windows.com/msedgedev/2026/11/19/hybrid-intelligence-on-the-web-introducing-aion-instruct-and-prompt-api-in-microsoft-edge/">微软 Edge 官方博客：Aion Instruct（2026-11-19）</a></li>
+<li><a href="https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/">TechCrunch：Gemini for Mac 上线 computer use（2026-11-19）</a></li>
+<li><a href="https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi">Wiz：agent-framework PyPI 投毒（2026-11-17）</a></li>
+<li><a href="https://cryptobriefing.com/gpt-6-2-astra-ember-0-robotics-benchmark/">Crypto Briefing：GPT-6.2 Astra Ember-0 具身实测（2026-11-20）</a></li>
+<li><a href="https://github.com/simplexai-labs/linger">GitHub：Linger（simplexai-labs/linger）</a></li>
+<li><a href="https://www.notebookcheck.net/Nvidia-unveils-Rubin-HPC-GPU-with-nearly-2-5x-RTX-5090-s-CUDA-cores-coming-in-2028.1451701.0.html">Notebookcheck：英伟达 Rubin HPC（2026-11-16）</a></li>
 <li><a href="https://mujoco.readthedocs.io/en/latest/changelog.html">MuJoCo 官方 Changelog：4.0.0 / 4.0.1（2026-11-06 / 11-11）</a></li>
 </ul>
 
