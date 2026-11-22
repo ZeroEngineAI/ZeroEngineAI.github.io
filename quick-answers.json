@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "updated": "2026-11-22",
+  "answers": [
+    {
+      "id": "ai-news",
+      "title": "今天 AI 有什么新消息",
+      "text": "今天 AI 的新消息（本站前沿页最新 5 条）：\n- 11 月 21 日：DeepSeek V1 作者张博（Tony Zhang）开源本地个人 Agent Linger（11 月 10 日首发，近日出圈…\n- 11 月 20 日：XDOF 公布 GPT-6.2 Astra 在 Ember-0 具身基准的实测：16 项任务平均成功率 19.6% 升至 41.…\n- 11 月 20 日：OpenAI 将 GPT-Live-1.1 接入 API：全双工语音模型，v1/live/sessions，$0.05/分钟（活…\n- 11 月 20 日：Thinking Machines 发布 Inkling 2 Mini：26.4B 参数循环 MoE（3.4B 激活，循环后等效…\n- 11 月 20 日：腾讯发布混元 Hy4 正式版开源权重：770B 总参数/49B 激活 MoE，1M 上下文（1,048,576），含 Hy4、H…\n\n完整时间线见 [AI 前沿](/ai/frontier/)",
+      "link": "/ai/frontier/"
+    },
+    {
+      "id": "free-tools",
+      "title": "免费好用的 AI 工具",
+      "text": "免费好用的 AI 工具（本站免费资源库已核实条目）：\n- [prompts.chat 提示词库：免费开源，CC0 可商用](https://prompts.chat/)\n- [GitHub Copilot 学生版 — 在读期间免费（写代码必领）](https://education.github.com/pack)\n- [ChatGPT Plus 限时免费 1 个月（部分账号可见）](https://turbo.gadgets360.com/en/ai/openai-offer-chatgpt-plus-is-now-free-for-one-month-news-10790992)\n- [AMD Token Lab 免费 API：10 积分，30 天有效](https://notebooks.amd.com/tokenlab)\n- [本站 AI 聊天](/ai/chat/)：DeepSeek 驱动，免费开放\n\n完整清单（101 条）见 [免费资源](/ai/free/)",
+      "link": "/ai/free/"
+    },
+    {
+      "id": "mining",
+      "title": "本周 GitHub 挖矿新发现",
+      "text": "最新一批挖矿短名单（2026-11-18 核实，13 项中 8 项标“接”）：\n- [microsoft/markitdown](https://github.com/microsoft/markitdown)：文件转 Markdown，轻量无模型\n- [adbar/trafilatura](https://github.com/adbar/trafilatura)：网页正文抽取，无需数据库\n- [DIYgod/RSSHub](https://github.com/DIYgod/RSSHub)：任意网站生成 RSS，中文源覆盖广\n- [BerriAI/litellm](https://github.com/BerriAI/litellm)：100+ 家 LLM 统一成 OpenAI 兼容接口\n- [pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai)：类型安全的 Python Agent 框架\n- [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo)：提示词与 RAG 评测，本地运行\n- [huggingface/lerobot](https://github.com/huggingface/lerobot)：机器人模型与数据集，仿真评估\n- [google-deepmind/mujoco](https://github.com/google-deepmind/mujoco)：物理仿真引擎，CPU 可跑\n\n完整短名单与不接理由见 [GitHub 挖矿](/ai/mining/)",
+      "link": "/ai/mining/"
+    },
+    {
+      "id": "robot",
+      "title": "机器人新进展",
+      "text": "机器人最新进展：\n- 11 月 11 日：Runway 开放 Praxis-1 机器人模型权重（Apache 2.0，可商用，27.2B 参数）\n- 11 月 6 日：Google DeepMind 发布 MuJoCo 4.0，11 月 11 日出 4.0.1 修复版\n- 11 月 5 日：Hugging Face 发布 LeRobot v0.7.0\n- 10 月 29 日：Scale + Hugging Face 发布 FineART 机器人数据集\n\n更多见 [机器人](/ai/robot/)",
+      "link": "/ai/robot/"
+    }
+  ]
+}
